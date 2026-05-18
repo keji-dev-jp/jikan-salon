@@ -15,6 +15,7 @@ https://keji-dev-jp.github.io/jikan-salon/
 - **共通コンポーネント（ヘッダー・フッター）は `assets/js/components.js` で一元管理**
 - **ファイル追加・変更・削除時は必ず README も更新する**
 - **絵文字アイコンは使用しない。SVGアイコン (`assets/img/icons/`) を使用する**
+- **記事ページは `article/` 以下に配置し、`article.css` を追加読み込みする**
 
 ## サイト構成
 
@@ -23,12 +24,14 @@ jikan-salon/
 ├── index.html                    # トップページ
 ├── concept/index.html            # コンセプト
 ├── category/
-│   ├── beauty/index.html           # 美容・スキンケア
-│   ├── health/index.html           # 健康・ウェルネス
-│   ├── career/index.html           # キャリア・ワーク
-│   ├── interior/index.html         # インテリア・整理收納
-│   ├── lifestyle/index.html        # ライフスタイル
-│   └── time/index.html             # 時間術・干し方改善
+│   ├── beauty/index.html         # 美容・スキンケア
+│   ├── health/index.html         # 健康・ウェルネス
+│   ├── career/index.html         # キャリア・ワーク
+│   ├── interior/index.html       # インテリア・整理収納
+│   ├── lifestyle/index.html      # ライフスタイル
+│   └── time/index.html           # 時間術・干し方改善
+├── article/
+│   └── template/index.html       # 記事テンプレート（複製して使用）
 ├── affiliate/index.html          # おすすめアイテム
 ├── shop/index.html               # デジタル商品
 ├── contact/index.html            # お問い合わせ
@@ -36,16 +39,27 @@ jikan-salon/
 ├── sitemap.xml                   # SEOサイトマップ
 ├── robots.txt                    # クローラー設定
 └── assets/
-    ├── css/style.css               # 全体スタイル（共通）
-    ├── js/components.js           # ヘッダー・フッター共通コンポーネント
+    ├── css/
+    │   ├── style.css             # 全体スタイル（共通）
+    │   └── article.css           # 記事ページ専用スタイル
+    ├── js/components.js          # ヘッダー・フッター共通コンポーネント
     └── img/
-        ├── logo.png                # ヘッダー用ロゴ（明るい背景向け）
-        ├── logo-footer.svg         # フッター用ロゴ（暗い背景専用・SVG白文字）
-        ├── ogp.png                 # OGP・シェア用画像（1200×630px）
-        ├── hero.png                # トップヒーロー画像
-        ├── concept.png             # コンセプトヘッダー画像
-        └── icons/                  # SVGアイコン一式
+        ├── logo.png              # ヘッダー用ロゴ（明るい背景向け）
+        ├── logo-footer.svg       # フッター用ロゴ（暗い背景専用・SVG白文字）
+        ├── ogp.png               # OGP・シェア用画像（1200×630px）
+        ├── hero.png              # トップヒーロー画像
+        ├── concept.png           # コンセプトヘッダー画像
+        └── icons/                # SVGアイコン一式
 ```
+
+## 記事ページの作り方
+
+1. `article/template/index.html` を複製する
+2. フォルダ名はスラッグ（英数字・ハイフン）にする　例: `article/morning-routine/`
+3. `<head>` 内のtitle・description・og・canonical を更新する
+4. `data-phase` / `data-title` / `data-subtitle` / `data-back` を記事に合わせて更新する
+5. 本文を書き換える
+6. `sitemap.xml` に新しいURLを追記する
 
 ## フォント方針
 
@@ -61,7 +75,7 @@ jikan-salon/
 | Beauty | スキンケア・メイク・ヘアケア・ボディケア |
 | Health | 食事・睡眠・運動・ストレスケア |
 | Career | ワークスタイル・副業・スキルアップ |
-| Interior | 整理收納・インテリアコーデ |
+| Interior | 整理収納・インテリアコーデ |
 | Lifestyle | 趣味・旅行・お金地入れ |
 | Time | 時間術・ルーティン化・タスク管理 |
 
@@ -69,5 +83,5 @@ jikan-salon/
 
 - [x] Phase 1: OGP/SEO・404・sitemap・robots.txt
 - [x] Phase 2: カテゴリページ（6ページ）
-- [ ] Phase 3: 記事テンプレート
+- [x] Phase 3: 記事テンプレート + article.css
 - [ ] Phase 4: アフィリエイト・デジタル商品・お問い合わせ

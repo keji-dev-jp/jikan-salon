@@ -1,0 +1,256 @@
+/* ===========================
+   記事ページ専用スタイル
+   対象: article/ 以下のすべてのページ
+   ルール:
+   - 基本スタイルは style.css に従う
+   - 記事固有のスタイルのみここで定義する
+=========================== */
+
+/* アイキャッチ */
+.article-eyecatch {
+  width: 100%;
+  max-height: 440px;
+  overflow: hidden;
+}
+.article-eyecatch img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* 記事本文ラッパー */
+.article-body {
+  padding-top: 48px;
+  padding-bottom: 72px;
+  max-width: 720px;
+}
+
+/* メタ情報 */
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.article-category {
+  display: inline-block;
+  background: #7c4dab;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  padding: 4px 14px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+.article-date {
+  font-size: 0.82rem;
+  color: #999;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+}
+
+/* 導入文 */
+.article-lead {
+  font-size: 1.02rem;
+  color: #444;
+  line-height: 1.95;
+  margin-bottom: 36px;
+  padding: 20px 24px;
+  background: #f7f3ff;
+  border-left: 4px solid #9b72cf;
+  border-radius: 0 10px 10px 0;
+}
+
+/* 目次 */
+.article-toc {
+  background: #fdf9ff;
+  border: 1px solid #dccdf0;
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-bottom: 48px;
+}
+.article-toc-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #5b3a86;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+.article-toc ol {
+  list-style: decimal;
+  padding-left: 20px;
+}
+.article-toc ol li {
+  padding: 5px 0;
+  font-size: 0.92rem;
+  color: #444;
+}
+.article-toc ol li a {
+  color: #7c4dab;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+.article-toc ol li a:hover {
+  border-bottom-color: #9b72cf;
+}
+
+/* セクション */
+.article-section {
+  margin-bottom: 56px;
+}
+
+/* 見出しH2 */
+.article-h2 {
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #3d2060;
+  border-left: 4px solid #7c4dab;
+  padding: 6px 0 6px 16px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* 見出しH3 */
+.article-h3 {
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #4a2870;
+  margin: 28px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px dashed #d0b8e8;
+}
+
+/* 本文段落 */
+.article-body p {
+  font-size: 0.96rem;
+  color: #333;
+  line-height: 1.95;
+  margin-bottom: 18px;
+  font-weight: 300;
+}
+
+/* ボックス共通 */
+.article-box {
+  border-radius: 12px;
+  padding: 22px 24px;
+  margin: 28px 0;
+}
+.article-box-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  margin-bottom: 12px;
+}
+.article-box ul {
+  list-style: none;
+  padding: 0;
+}
+.article-box ul li {
+  font-size: 0.94rem;
+  color: #333;
+  padding: 5px 0 5px 18px;
+  position: relative;
+  font-weight: 300;
+  line-height: 1.75;
+}
+.article-box ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+}
+
+/* POINTボックス */
+.article-box--point {
+  background: #f0ebfa;
+  border: 1px solid #c4a0d8;
+}
+.article-box--point .article-box-label { color: #5b3a86; }
+.article-box--point ul li::before { color: #7c4dab; }
+
+/* NOTEボックス */
+.article-box--note {
+  background: #fff9e6;
+  border: 1px solid #e6cc7a;
+}
+.article-box--note .article-box-label { color: #8a6a00; }
+.article-box--note p { margin-bottom: 0; }
+
+/* SUMMARYボックス */
+.article-box--summary {
+  background: #f0faf0;
+  border: 1px solid #7ac47a;
+}
+.article-box--summary .article-box-label { color: #1e6e2a; }
+.article-box--summary ul li::before { color: #5aab6a; }
+
+/* アフィリエイトカード */
+.affiliate-card {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  background: #fff;
+  border: 1px solid #e0d0f0;
+  border-radius: 14px;
+  padding: 18px;
+  margin: 24px 0;
+  box-shadow: 0 2px 10px rgba(80,40,120,0.07);
+}
+.affiliate-card-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+.affiliate-card-body {
+  flex: 1;
+}
+.affiliate-card-name {
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: #3d2060;
+  margin-bottom: 6px;
+}
+.affiliate-card-desc {
+  font-size: 0.84rem;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+.affiliate-card-btn {
+  display: inline-block;
+  background: #bf3e4c;
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 8px 20px;
+  border-radius: 6px;
+  letter-spacing: 0.06em;
+  transition: background 0.2s;
+}
+.affiliate-card-btn:hover { background: #9b2a38; }
+
+/* 記事末尾CTAリンク */
+.article-back {
+  margin-top: 56px;
+  text-align: center;
+}
+
+/* レスポンシブ */
+@media (max-width: 767px) {
+  .article-eyecatch { max-height: 220px; }
+  .article-eyecatch img { height: 220px; }
+  .article-body { padding-top: 32px; padding-bottom: 52px; }
+  .article-lead { font-size: 0.94rem; padding: 16px 18px; }
+  .article-toc { padding: 18px 20px; }
+  .article-h2 { font-size: 1.15rem; }
+  .article-h3 { font-size: 1rem; }
+  .affiliate-card { flex-direction: column; }
+  .affiliate-card-img { width: 100%; height: 180px; }
+}
