@@ -1,12 +1,9 @@
 /* ===========================
    jikan salon - 共通コンポーネント
    ヘッダー・フッターを全ページに自動挿入
-   パスは GitHub Pages のリポジトリ名を含む絶対パスで統一管理
 =========================== */
 
 (function () {
-  // GitHub Pages のリポジトリ名を含む絶対パスで指定
-  // リポジトリ名が変わったときはここだけ変更する
   const ROOT = '/jikan-salon';
 
   // ===== HEADER =====
@@ -21,8 +18,8 @@
             <a href="${ROOT}/index.html" class="header-logo">
               <img src="${ROOT}/assets/img/logo.png" alt="jikan salon" class="logo-img" />
             </a>
-            <h1 class="site-title">30代女性の時間整理サロン</h1>
-            <p class="site-subtitle">家事・仕事・プライベートを<br>スマートに整える30日プログラム</p>
+            <h1 class="site-title">jikan salon</h1>
+            <p class="site-subtitle">毎日を、少しずつ整える。<br>自分のための時間をつくる30日プログラム</p>
           </div>
         </header>
       `;
@@ -37,7 +34,7 @@
         <header class="header-sub">
           <div class="container">
             <a href="${backHref}" class="back-link">← ${backLabel}</a>
-            ${phase   ? `<p class="program-phase">${phase}</p>`      : ''}
+            ${phase    ? `<p class="program-phase">${phase}</p>`     : ''}
             <h1 class="page-title">${title}</h1>
             ${subtitle ? `<p class="page-subtitle">${subtitle}</p>` : ''}
           </div>
