@@ -19,16 +19,9 @@ body {
   background-color: #fdfcff;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+a { color: inherit; text-decoration: none; }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
+img { max-width: 100%; height: auto; display: block; }
 
 ul, ol { list-style: none; }
 
@@ -55,43 +48,63 @@ ul, ol { list-style: none; }
 }
 
 .header-logo,
-.footer-logo {
-  display: block;
-  line-height: 0;
-}
+.footer-logo { display: block; line-height: 0; }
 
 /* ===========================
    Header: TOP
 =========================== */
 .header {
   background: linear-gradient(135deg, #ede7f6, #f3e5f5);
-  padding: 56px 0 48px;
+  padding: 40px 0 32px;
   text-align: center;
 }
 
 .site-title {
-  font-size: 2rem;
+  font-size: 1.9rem;
   color: #5b3a86;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   line-height: 1.4;
 }
 
 .site-subtitle {
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: #666;
-  margin-bottom: 28px;
   line-height: 1.7;
 }
 
 /* ===========================
-   Hero Image
+   Hero Section（背景画像）
 =========================== */
-.hero-img {
+.section-hero {
+  background-image: url('/jikan-salon/assets/img/hero.png');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
   width: 100%;
-  max-height: 480px;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
+  background: rgba(30, 10, 60, 0.52);
+  padding: 72px 0;
+}
+
+.hero-lead {
+  font-size: 0.95rem;
+  color: #e8d8ff;
+  letter-spacing: 0.12em;
+  margin-bottom: 12px;
+}
+
+.hero-catch {
+  font-size: 2rem;
+  color: #fff;
+  line-height: 1.55;
+  margin-bottom: 32px;
+  font-weight: bold;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 /* ===========================
@@ -145,7 +158,7 @@ ul, ol { list-style: none; }
   border-radius: 30px;
   font-size: 1rem;
   font-weight: bold;
-  box-shadow: 0 4px 12px rgba(124,77,171,0.25);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
   transition: background 0.2s, transform 0.2s;
 }
 
@@ -164,10 +177,7 @@ ul, ol { list-style: none; }
   transition: color 0.2s, border-color 0.2s;
 }
 
-.btn-card:hover {
-  color: #5e3688;
-  border-color: #5e3688;
-}
+.btn-card:hover { color: #5e3688; border-color: #5e3688; }
 
 .link-inline {
   color: #7c4dab;
@@ -205,7 +215,7 @@ ul, ol { list-style: none; }
 }
 
 /* ===========================
-   Persona List (Top)
+   Persona List
 =========================== */
 .persona-list li {
   padding: 10px 0 10px 24px;
@@ -220,6 +230,43 @@ ul, ol { list-style: none; }
   position: absolute;
   left: 0;
   color: #9b72cf;
+}
+
+/* ===========================
+   Concept Image Section
+=========================== */
+.section-concept-img {
+  padding: 48px 0;
+  background-color: #f9f5ff;
+}
+
+.concept-img-wrap {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+  position: relative;
+  max-height: 420px;
+}
+
+.concept-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.concept-img-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(44, 20, 70, 0.6);
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  padding: 16px 20px;
+  letter-spacing: 0.08em;
 }
 
 /* ===========================
@@ -297,16 +344,6 @@ ul, ol { list-style: none; }
 }
 
 /* ===========================
-   Concept Image
-=========================== */
-.concept-img-wrap {
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.09);
-  margin-top: 28px;
-}
-
-/* ===========================
    Concept Cards
 =========================== */
 .concept-cards {
@@ -329,17 +366,8 @@ ul, ol { list-style: none; }
   margin-bottom: 10px;
 }
 
-.concept-card h3 {
-  font-size: 0.96rem;
-  color: #5b3a86;
-  margin-bottom: 8px;
-}
-
-.concept-card p {
-  font-size: 0.86rem;
-  color: #666;
-  line-height: 1.6;
-}
+.concept-card h3 { font-size: 0.96rem; color: #5b3a86; margin-bottom: 8px; }
+.concept-card p  { font-size: 0.86rem; color: #666; line-height: 1.6; }
 
 /* ===========================
    Concept Flow
@@ -374,18 +402,8 @@ ul, ol { list-style: none; }
   white-space: nowrap;
 }
 
-.concept-flow li strong {
-  display: block;
-  font-size: 0.98rem;
-  color: #333;
-  margin-bottom: 4px;
-}
-
-.concept-flow li p {
-  font-size: 0.88rem;
-  color: #666;
-  line-height: 1.6;
-}
+.concept-flow li strong { display: block; font-size: 0.98rem; color: #333; margin-bottom: 4px; }
+.concept-flow li p      { font-size: 0.88rem; color: #666; line-height: 1.6; }
 
 /* ===========================
    Program Grid
@@ -409,9 +427,7 @@ ul, ol { list-style: none; }
   transition: box-shadow 0.2s;
 }
 
-.program-card:hover {
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-}
+.program-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
 
 .program-day {
   display: inline-block;
@@ -424,17 +440,8 @@ ul, ol { list-style: none; }
   margin-bottom: 10px;
 }
 
-.program-card h3 {
-  font-size: 0.96rem;
-  margin-bottom: 8px;
-  color: #333;
-}
-
-.program-card p {
-  font-size: 0.86rem;
-  color: #666;
-  line-height: 1.6;
-}
+.program-card h3 { font-size: 0.96rem; margin-bottom: 8px; color: #333; }
+.program-card p  { font-size: 0.86rem; color: #666; line-height: 1.6; }
 
 /* ===========================
    Step List
@@ -469,18 +476,8 @@ ul, ol { list-style: none; }
   white-space: nowrap;
 }
 
-.step-list li strong {
-  display: block;
-  font-size: 0.98rem;
-  color: #333;
-  margin-bottom: 4px;
-}
-
-.step-list li p {
-  font-size: 0.88rem;
-  color: #666;
-  line-height: 1.6;
-}
+.step-list li strong { display: block; font-size: 0.98rem; color: #333; margin-bottom: 4px; }
+.step-list li p      { font-size: 0.88rem; color: #666; line-height: 1.6; }
 
 /* ===========================
    Template / Time Table
@@ -561,17 +558,8 @@ ul, ol { list-style: none; }
   background: linear-gradient(135deg, #f3e5f5, #ede7f6);
 }
 
-.section-cta h2 {
-  font-size: 1.45rem;
-  color: #5b3a86;
-  margin-bottom: 12px;
-}
-
-.section-cta p {
-  color: #666;
-  margin-bottom: 28px;
-  line-height: 1.7;
-}
+.section-cta h2 { font-size: 1.45rem; color: #5b3a86; margin-bottom: 12px; }
+.section-cta p  { color: #666; margin-bottom: 28px; line-height: 1.7; }
 
 /* ===========================
    Footer
@@ -591,93 +579,75 @@ ul, ol { list-style: none; }
   margin-bottom: 16px;
 }
 
-.footer-nav a {
-  color: #bbb;
-  font-size: 0.84rem;
-  transition: color 0.2s;
-}
-
+.footer-nav a { color: #bbb; font-size: 0.84rem; transition: color 0.2s; }
 .footer-nav a:hover { color: #fff; }
-
-.footer-copy {
-  font-size: 0.76rem;
-  color: #777;
-}
+.footer-copy { font-size: 0.76rem; color: #777; }
 
 /* ===========================
-   Responsive: Tablet
-   768px 〜 1024px
+   Responsive: Tablet（〜1024px）
 =========================== */
 @media (max-width: 1024px) {
-  .container {
-    max-width: 720px;
-    padding: 0 28px;
-  }
-
-  .site-title  { font-size: 1.75rem; }
-  .page-title  { font-size: 1.55rem; }
-  .hero-img    { max-height: 380px; }
-
-  /* プログラムグリッド：2列 */
-  .program-grid { grid-template-columns: repeat(2, 1fr); }
-
-  /* コンセプトカード：2列 */
-  .concept-cards { grid-template-columns: repeat(2, 1fr); }
-
-  .header      { padding: 44px 0 36px; }
+  .container        { max-width: 720px; padding: 0 28px; }
+  .site-title       { font-size: 1.7rem; }
+  .page-title       { font-size: 1.5rem; }
+  .hero-catch       { font-size: 1.65rem; }
+  .section-hero     { min-height: 380px; }
+  .hero-overlay     { padding: 56px 0; }
+  .program-grid     { grid-template-columns: repeat(2, 1fr); }
+  .concept-cards    { grid-template-columns: repeat(2, 1fr); }
+  .concept-img-wrap { max-height: 340px; }
   .section-white,
   .section-lavender,
-  .section-program { padding: 44px 0; }
-  .section-cta { padding: 52px 0; }
+  .section-program  { padding: 44px 0; }
+  .section-cta      { padding: 52px 0; }
 }
 
 /* ===========================
-   Responsive: Mobile
-   〜 767px
+   Responsive: Mobile（〜767px）
 =========================== */
 @media (max-width: 767px) {
-  .container {
-    padding: 0 16px;
-  }
+  .container         { padding: 0 16px; }
 
   /* Header */
-  .header       { padding: 36px 0 28px; }
-  .site-title   { font-size: 1.4rem; }
-  .site-subtitle { font-size: 0.92rem; }
-  .header-sub   { padding: 24px 0 20px; }
-  .page-title   { font-size: 1.25rem; }
-  .page-subtitle { font-size: 0.88rem; }
+  .header            { padding: 32px 0 26px; }
+  .site-title        { font-size: 1.35rem; }
+  .site-subtitle     { font-size: 0.9rem; }
+  .header-sub        { padding: 24px 0 18px; }
+  .page-title        { font-size: 1.2rem; }
+  .page-subtitle     { font-size: 0.88rem; }
 
   /* Hero */
-  .hero-img { max-height: 220px; }
+  .section-hero      { min-height: 280px; }
+  .hero-overlay      { padding: 40px 0; }
+  .hero-lead         { font-size: 0.82rem; }
+  .hero-catch        { font-size: 1.25rem; margin-bottom: 24px; }
 
   /* Sections */
   .section-white,
   .section-lavender,
-  .section-program { padding: 36px 0; }
-  .section-cta      { padding: 44px 0; }
-  .section-title    { font-size: 1.1rem; }
+  .section-program,
+  .section-concept-img { padding: 36px 0; }
+  .section-cta          { padding: 44px 0; }
+  .section-title        { font-size: 1.1rem; }
 
-  /* プログラムグリッド：1列 */
-  .program-grid   { grid-template-columns: 1fr; gap: 14px; }
+  /* Concept image */
+  .concept-img-wrap     { max-height: 220px; border-radius: 10px; }
+  .concept-img-caption  { font-size: 0.86rem; padding: 12px 14px; }
 
-  /* コンセプトカード：1列 */
-  .concept-cards  { grid-template-columns: 1fr; gap: 12px; }
+  /* Grids → 1列 */
+  .program-grid  { grid-template-columns: 1fr; gap: 14px; }
+  .concept-cards { grid-template-columns: 1fr; gap: 12px; }
 
-  /* Step / Flow：縦並び */
+  /* Step / Flow → 縦並び */
   .step-list li,
-  .concept-flow li {
-    flex-direction: column;
-    gap: 8px;
-  }
-
+  .concept-flow li    { flex-direction: column; gap: 8px; }
   .step-num,
-  .flow-step { min-width: unset; width: fit-content; }
+  .flow-step          { min-width: unset; width: fit-content; }
 
-  /* ペルソナカード */
+  /* Persona */
   .persona-card { max-width: 100%; padding: 18px; }
 
-  /* ボタン */
+  /* Button */
   .btn-hero {
     display: block;
     width: 100%;
@@ -687,12 +657,12 @@ ul, ol { list-style: none; }
     font-size: 0.95rem;
   }
 
-  /* フッター */
+  /* Footer */
   .footer       { padding: 28px 0; }
-  .footer-nav   { gap: 8px 16px; }
+  .footer-nav   { gap: 8px 14px; }
   .footer-nav a { font-size: 0.8rem; }
 
-  /* テーブル */
+  /* Table */
   .time-table th,
   .time-table td { padding: 10px 12px; font-size: 0.84rem; }
 }
