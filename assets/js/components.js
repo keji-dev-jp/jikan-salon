@@ -1,6 +1,5 @@
 /* ===========================
    jikan salon - 共通コンポーネント
-   ヘッダー・フッターを全ページに自動挿入
 =========================== */
 
 (function () {
@@ -18,8 +17,7 @@
             <a href="${ROOT}/index.html" class="header-logo">
               <img src="${ROOT}/assets/img/logo.png" alt="jikan salon" class="logo-img" />
             </a>
-            <h1 class="site-title">jikan salon</h1>
-            <p class="site-subtitle">毎日を、少しずつ整える。<br>自分のための時間をつくる30日プログラム</p>
+            <p class="site-subtitle">時間を大切にする女性のためのライフスタイルメディア</p>
           </div>
         </header>
       `;
@@ -53,13 +51,14 @@
             <img src="${ROOT}/assets/img/logo.png" alt="jikan salon" class="logo-img logo-img--footer" />
           </a>
           <nav class="footer-nav">
-            <a href="${ROOT}/index.html">トップ</a>
+            <a href="${ROOT}/index.html">Topics</a>
             <a href="${ROOT}/concept/index.html">コンセプト</a>
-            <a href="${ROOT}/program/1-7day/index.html">30日プログラム</a>
-            <a href="${ROOT}/templates/index.html">テンプレート</a>
-            <a href="${ROOT}/affiliate/index.html">おすすめアイテム</a>
-            <a href="${ROOT}/shop/index.html">デジタル商品</a>
-            <a href="${ROOT}/contact/index.html">お問い合わせ</a>
+            <a href="${ROOT}/category/beauty/index.html">Beauty</a>
+            <a href="${ROOT}/category/health/index.html">Health</a>
+            <a href="${ROOT}/category/career/index.html">Career</a>
+            <a href="${ROOT}/category/interior/index.html">Interior</a>
+            <a href="${ROOT}/category/lifestyle/index.html">Lifestyle</a>
+            <a href="${ROOT}/category/time/index.html">Time</a>
           </nav>
           <p class="footer-copy">&copy; 2026 jikan salon</p>
         </div>
