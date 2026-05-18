@@ -30,7 +30,7 @@ ul {
 }
 
 /* ===========================
-   Header
+   Header: TOP
 =========================== */
 .header {
   background: linear-gradient(135deg, #ede7f6, #f3e5f5);
@@ -61,6 +61,48 @@ ul {
 }
 
 /* ===========================
+   Header: Sub Pages
+=========================== */
+.header-sub {
+  background: linear-gradient(135deg, #ede7f6, #f3e5f5);
+  padding: 40px 0 36px;
+}
+
+.back-link {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: #7c4dab;
+  margin-bottom: 12px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.back-link:hover {
+  border-bottom-color: #7c4dab;
+}
+
+.program-phase {
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  color: #9b72cf;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.page-title {
+  font-size: 1.8rem;
+  color: #5b3a86;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.page-subtitle {
+  font-size: 0.98rem;
+  color: #666;
+  line-height: 1.7;
+}
+
+/* ===========================
    Buttons
 =========================== */
 .btn-hero {
@@ -82,7 +124,7 @@ ul {
 
 .btn-card {
   display: inline-block;
-  margin-top: 12px;
+  margin-top: 8px;
   font-size: 0.85rem;
   color: #7c4dab;
   border-bottom: 1px solid #7c4dab;
@@ -94,24 +136,51 @@ ul {
   border-color: #5e3688;
 }
 
+.link-inline {
+  color: #7c4dab;
+  border-bottom: 1px solid #c9a6ef;
+}
+
+.link-inline:hover {
+  color: #5e3688;
+}
+
 /* ===========================
-   Section: Persona
+   Section: White
 =========================== */
-.section-persona {
-  padding: 56px 0;
+.section-white {
+  padding: 48px 0;
   background-color: #fff;
 }
 
+.section-white + .section-white {
+  border-top: 1px solid #f0eaf8;
+}
+
+/* ===========================
+   Section: Lavender
+=========================== */
+.section-lavender {
+  padding: 48px 0;
+  background-color: #f9f5ff;
+}
+
+/* ===========================
+   Section Title
+=========================== */
 .section-title {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: #5b3a86;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   padding-bottom: 8px;
   border-bottom: 2px solid #e1d5f5;
 }
 
+/* ===========================
+   Persona List
+=========================== */
 .persona-list li {
-  padding: 10px 0 10px 20px;
+  padding: 10px 0 10px 24px;
   position: relative;
   border-bottom: 1px solid #f0eaf8;
   font-size: 0.98rem;
@@ -126,7 +195,7 @@ ul {
 }
 
 /* ===========================
-   Section: Program
+   Program Grid
 =========================== */
 .section-program {
   padding: 56px 0;
@@ -176,6 +245,121 @@ ul {
 }
 
 /* ===========================
+   Step List (1-7day index)
+=========================== */
+.step-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.step-list li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-left: 4px solid #9b72cf;
+}
+
+.step-num {
+  display: inline-block;
+  min-width: 60px;
+  background-color: #ede7f6;
+  color: #7c4dab;
+  font-size: 0.78rem;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 6px;
+  text-align: center;
+  white-space: nowrap;
+  height: fit-content;
+}
+
+.step-list li p {
+  font-size: 0.88rem;
+  color: #666;
+  margin-top: 4px;
+  line-height: 1.6;
+}
+
+/* ===========================
+   Template Block
+=========================== */
+.template-note {
+  font-size: 0.88rem;
+  color: #666;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.template-block {
+  overflow-x: auto;
+}
+
+.time-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.time-table th {
+  background-color: #7c4dab;
+  color: #fff;
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.time-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #f0eaf8;
+  color: #444;
+}
+
+.time-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.time-table tbody tr:hover {
+  background-color: #faf5ff;
+}
+
+/* ===========================
+   Checklist
+=========================== */
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.checklist li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.98rem;
+  color: #444;
+  padding: 12px 16px;
+  background: #f9f5ff;
+  border-radius: 8px;
+  border-left: 3px solid #9b72cf;
+}
+
+.checklist li::before {
+  content: "□";
+  font-size: 1.1rem;
+  color: #9b72cf;
+  flex-shrink: 0;
+}
+
+/* ===========================
    Section: CTA
 =========================== */
 .section-cta {
@@ -185,7 +369,7 @@ ul {
 }
 
 .section-cta h2 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: #5b3a86;
   margin-bottom: 12px;
 }
@@ -194,6 +378,13 @@ ul {
   color: #666;
   margin-bottom: 28px;
   line-height: 1.7;
+}
+
+/* ===========================
+   Main
+=========================== */
+.main {
+  padding: 0;
 }
 
 /* ===========================
@@ -236,7 +427,13 @@ ul {
   .site-title {
     font-size: 1.5rem;
   }
+  .page-title {
+    font-size: 1.4rem;
+  }
   .program-grid {
     grid-template-columns: 1fr;
+  }
+  .step-list li {
+    flex-direction: column;
   }
 }
