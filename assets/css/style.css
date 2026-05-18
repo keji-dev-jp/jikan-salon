@@ -1,7 +1,5 @@
 /* ===========================
-   Google Fonts 読み込み
-   文字：Noto Serif JP（見出し・上品な気分）
-         Noto Sans JP（本文・読みやすさ）
+   Google Fonts
 =========================== */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
 
@@ -10,48 +8,61 @@
 =========================== */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { font-size: 16px; scroll-behavior: smooth; }
-
 body {
-  /* 本文: Noto Sans JP で清潔な読みやすさ */
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
-  font-weight: 400;
-  line-height: 1.85;
-  color: #2c2438;
-  background-color: #fdfcff;
+  font-weight: 400; line-height: 1.85; color: #2c2438; background-color: #fdfcff;
   -webkit-font-smoothing: antialiased;
 }
-
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; height: auto; display: block; }
 ul, ol { list-style: none; }
 .container { max-width: 960px; margin: 0 auto; padding: 0 32px; }
 
-/* 見出し用: Noto Serif JP（雅りとした印象） */
 h1, h2, h3,
-.site-title, .hero-catch, .section-title, .page-title {
+.hero-catch, .section-title, .page-title {
   font-family: "Noto Serif JP", "Hiragino Mincho Pro", serif;
+}
+
+/* ===========================
+   ルール: jikan salon は常に太字
+=========================== */
+.site-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #5b3a86;
+  letter-spacing: 0.1em;
+  margin-bottom: 4px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+.site-name strong { font-weight: 700; }
+
+.header-sub-brand {
+  display: inline-block;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #7a5496;
+  letter-spacing: 0.12em;
+  margin-bottom: 6px;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 /* ===========================
    Logo
 =========================== */
 .logo-img {
-  height: 52px;
-  width: auto;
-  margin: 0 auto 6px;
-  object-fit: contain;
-  mix-blend-mode: multiply;
+  height: 52px; width: auto; margin: 0 auto 6px;
+  object-fit: contain; mix-blend-mode: multiply;
   transition: opacity 0.2s;
 }
 .logo-img:hover { opacity: 0.8; }
 
-.logo-img--footer {
-  height: 36px;
+/* フッターロゴ: SVG専用資産を使用。filter依存禁止 */
+.footer-logo-img {
+  display: block;
+  width: auto;
+  height: 48px;
   margin: 0 auto 20px;
   object-fit: contain;
-  mix-blend-mode: normal;
-  filter: brightness(0) invert(1);
-  opacity: 0.95;
 }
 
 .header-logo, .footer-logo { display: block; line-height: 0; }
@@ -61,18 +72,12 @@ h1, h2, h3,
 =========================== */
 .header {
   background: linear-gradient(135deg, #ede7f6, #fce4ec);
-  padding: 24px 0 20px;
-  text-align: center;
+  padding: 24px 0 20px; text-align: center;
   border-bottom: 1px solid #e0d0f0;
 }
-
 .site-subtitle {
-  font-size: 0.82rem;
-  font-family: "Noto Sans JP", sans-serif;
-  font-weight: 300;
-  color: #7a5496;
-  letter-spacing: 0.12em;
-  margin-top: 2px;
+  font-size: 0.82rem; font-family: "Noto Sans JP", sans-serif;
+  font-weight: 300; color: #7a5496; letter-spacing: 0.12em;
 }
 
 /* ===========================
@@ -80,21 +85,15 @@ h1, h2, h3,
 =========================== */
 .header-sub {
   background: linear-gradient(135deg, #ede7f6, #fce4ec);
-  padding: 36px 0 30px;
-  border-bottom: 1px solid #e0d0f0;
+  padding: 36px 0 30px; border-bottom: 1px solid #e0d0f0;
 }
 .back-link {
   display: inline-block; font-size: 0.82rem; color: #7a5496;
-  margin-bottom: 12px; border-bottom: 1px solid #c4a0d8;
-  padding-bottom: 2px; font-family: "Noto Sans JP", sans-serif;
-  font-weight: 300; transition: color 0.2s;
+  margin-bottom: 6px; border-bottom: 1px solid #c4a0d8;
+  padding-bottom: 2px; font-weight: 300; transition: color 0.2s;
 }
 .back-link:hover { color: #3d2060; }
-.program-phase {
-  font-size: 0.72rem; letter-spacing: 0.18em; color: #6a359c;
-  margin-bottom: 6px; text-transform: uppercase; font-weight: 700;
-  font-family: "Noto Sans JP", sans-serif;
-}
+.program-phase { font-size: 0.72rem; letter-spacing: 0.18em; color: #6a359c; margin-bottom: 6px; text-transform: uppercase; font-weight: 700; }
 .page-title    { font-size: 1.75rem; color: #3d2060; margin-bottom: 8px; line-height: 1.5; font-weight: 600; }
 .page-subtitle { font-size: 0.94rem; color: #555; line-height: 1.8; font-weight: 300; }
 
@@ -103,37 +102,25 @@ h1, h2, h3,
 =========================== */
 .section-hero {
   background-size: cover; background-position: center;
-  background-repeat: no-repeat; min-height: 520px;
-  display: flex; align-items: center;
+  background-repeat: no-repeat; min-height: 520px; display: flex; align-items: center;
 }
 .section-hero--concept { min-height: 440px; }
-
-.hero-overlay {
-  width: 100%; background: rgba(18, 4, 40, 0.60); padding: 88px 0;
-}
-
+.hero-overlay { width: 100%; background: rgba(18,4,40,0.60); padding: 88px 0; }
 .hero-lead {
-  font-size: 0.75rem; color: #e0ccff;
-  letter-spacing: 0.28em; margin-bottom: 16px;
-  text-transform: uppercase; font-family: "Noto Sans JP", sans-serif;
-  font-weight: 300;
+  font-size: 0.75rem; color: #e0ccff; letter-spacing: 0.28em;
+  margin-bottom: 16px; text-transform: uppercase;
+  font-family: "Noto Sans JP", sans-serif; font-weight: 300;
 }
-
-/* ヒーローキャッチ: Noto Serif で優雅な印象 */
 .hero-catch {
   font-size: 2.4rem; color: #fff; line-height: 1.65;
   margin-bottom: 20px; font-weight: 600;
-  text-shadow: 0 2px 16px rgba(0,0,0,0.55);
-  letter-spacing: 0.04em;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.55); letter-spacing: 0.04em;
 }
-
 .hero-sub {
   font-size: 1rem; color: #f2ecff; line-height: 1.85;
   margin-bottom: 36px; font-weight: 300;
-  text-shadow: 0 1px 8px rgba(0,0,0,0.45);
-  letter-spacing: 0.04em;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.45); letter-spacing: 0.04em;
 }
-
 .back-link--hero {
   display: inline-block; color: #e0ccff; font-size: 0.82rem;
   margin-bottom: 20px; border-bottom: 1px solid rgba(220,190,255,0.5);
@@ -151,15 +138,12 @@ h1, h2, h3,
   box-shadow: 0 4px 20px rgba(0,0,0,0.3); transition: background 0.2s, transform 0.2s;
 }
 .btn-hero:hover { background-color: #5e3688; transform: translateY(-2px); }
-
 .btn-card {
   display: inline-block; margin-top: 10px; font-size: 0.82rem;
   color: #7c4dab; border-bottom: 1px solid #7c4dab;
-  padding-bottom: 2px; font-weight: 500; letter-spacing: 0.04em;
-  transition: color 0.2s, border-color 0.2s;
+  padding-bottom: 2px; font-weight: 500; transition: color 0.2s;
 }
-.btn-card:hover { color: #4e2c7a; border-color: #4e2c7a; }
-
+.btn-card:hover { color: #4e2c7a; }
 .link-inline { color: #7c4dab; border-bottom: 1px solid #c4a0d8; transition: color 0.2s; }
 .link-inline:hover { color: #4e2c7a; }
 
@@ -170,8 +154,6 @@ h1, h2, h3,
 .section-white   { padding: 64px 0; background-color: #fff; }
 .section-white + .section-white { border-top: 1px solid #ede5fa; }
 .section-lavender { padding: 64px 0; background-color: #f7f3ff; }
-
-/* セクションタイトル: Serif で上品な見出し */
 .section-title {
   font-size: 1.45rem; color: #3d2060; margin-bottom: 32px;
   padding-bottom: 12px; border-bottom: 1.5px solid #d0b8e8;
@@ -184,55 +166,36 @@ h1, h2, h3,
 /* ===========================
    Category Grid
 =========================== */
-.category-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
-}
-
+.category-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .category-card {
   display: block; background: #fff; border-radius: 16px;
   overflow: hidden; box-shadow: 0 3px 16px rgba(80,40,120,0.09);
   transition: transform 0.25s, box-shadow 0.25s;
 }
-.category-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 28px rgba(80,40,120,0.15);
-}
-
-.category-card-img {
-  height: 160px; background-size: cover; background-position: center; position: relative;
-}
-
+.category-card:hover { transform: translateY(-5px); box-shadow: 0 10px 28px rgba(80,40,120,0.15); }
+.category-card-img { height: 160px; background-size: cover; background-position: center; position: relative; }
 .category-label {
   position: absolute; top: 12px; left: 12px;
-  background: rgba(90, 40, 140, 0.82); color: #fff;
+  background: rgba(90,40,140,0.82); color: #fff;
   font-size: 0.68rem; font-weight: 700; letter-spacing: 0.16em;
   padding: 4px 12px; border-radius: 20px; text-transform: uppercase;
-  font-family: "Noto Sans JP", sans-serif;
 }
-
 .category-card-body { padding: 20px 22px 24px; }
 .category-card-body h3 {
   font-size: 1.02rem; color: #3d2060; margin-bottom: 6px;
-  font-weight: 600; font-family: "Noto Serif JP", serif;
-  letter-spacing: 0.02em;
+  font-weight: 600; font-family: "Noto Serif JP", serif; letter-spacing: 0.02em;
 }
-.category-card-body p {
-  font-size: 0.84rem; color: #666; line-height: 1.7; font-weight: 300;
-}
+.category-card-body p { font-size: 0.84rem; color: #666; line-height: 1.7; font-weight: 300; }
 
 /* ===========================
    Genre List
 =========================== */
 .genre-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.genre-item {
-  background: #fff; border-radius: 10px; padding: 18px 20px;
-  box-shadow: 0 2px 8px rgba(80,40,120,0.07);
-}
+.genre-item { background: #fff; border-radius: 10px; padding: 18px 20px; box-shadow: 0 2px 8px rgba(80,40,120,0.07); }
 .genre-badge {
   display: inline-block; background: #7c4dab; color: #fff;
   font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
   padding: 3px 12px; border-radius: 20px; margin-bottom: 8px;
-  font-family: "Noto Sans JP", sans-serif;
 }
 .genre-item p { font-size: 0.86rem; color: #555; line-height: 1.7; font-weight: 300; }
 
@@ -241,8 +204,7 @@ h1, h2, h3,
 =========================== */
 .persona-list li {
   padding: 11px 0 11px 28px; position: relative;
-  border-bottom: 1px solid #ede5fa; font-size: 0.96rem; color: #333;
-  font-weight: 300;
+  border-bottom: 1px solid #ede5fa; font-size: 0.96rem; color: #333; font-weight: 300;
 }
 .persona-list li::before { content: "✓"; position: absolute; left: 0; color: #7c4dab; font-weight: 700; }
 
@@ -254,10 +216,10 @@ h1, h2, h3,
   border-radius: 18px; overflow: hidden;
   box-shadow: 0 8px 28px rgba(0,0,0,0.12); position: relative; max-height: 440px;
 }
-.concept-img-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+.concept-img-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
 .concept-img-caption {
   position: absolute; bottom: 0; left: 0; right: 0;
-  background: rgba(25, 8, 52, 0.72); color: #fff;
+  background: rgba(25,8,52,0.72); color: #fff;
   font-size: 1.02rem; text-align: center; padding: 18px 20px;
   letter-spacing: 0.1em; font-family: "Noto Serif JP", serif; font-weight: 300;
 }
@@ -270,40 +232,24 @@ h1, h2, h3,
   background: #fdf9ff; border-radius: 14px; padding: 30px 22px;
   text-align: center; border: 1px solid #dccdf0;
 }
-.concept-icon {
-  display: flex; justify-content: center; align-items: center;
-  margin: 0 auto 16px; width: 60px; height: 60px;
-}
+.concept-icon { display: flex; justify-content: center; align-items: center; margin: 0 auto 16px; width: 60px; height: 60px; }
 .concept-icon img { width: 100%; height: 100%; }
-.concept-card h3 {
-  font-size: 1rem; color: #3d2060; margin-bottom: 10px;
-  font-weight: 600; font-family: "Noto Serif JP", serif;
-}
-.concept-card p { font-size: 0.86rem; color: #555; line-height: 1.75; font-weight: 300; }
+.concept-card h3 { font-size: 1rem; color: #3d2060; margin-bottom: 10px; font-weight: 600; font-family: "Noto Serif JP", serif; }
+.concept-card p  { font-size: 0.86rem; color: #555; line-height: 1.75; font-weight: 300; }
 
 /* ===========================
    Persona Card
 =========================== */
-.persona-card {
-  background: #fff; border-radius: 16px; padding: 30px;
-  box-shadow: 0 3px 16px rgba(80,40,120,0.09); max-width: 560px;
-}
+.persona-card { background: #fff; border-radius: 16px; padding: 30px; box-shadow: 0 3px 16px rgba(80,40,120,0.09); max-width: 560px; }
 .persona-name { font-size: 1.05rem; font-weight: 600; color: #3d2060; margin-bottom: 14px; font-family: "Noto Serif JP", serif; }
 .persona-detail { margin-bottom: 18px; }
-.persona-detail li {
-  display: flex; align-items: center; gap: 8px;
-  font-size: 0.9rem; color: #444; padding: 5px 0; font-weight: 300;
-}
+.persona-detail li { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: #444; padding: 5px 0; font-weight: 300; }
 .persona-icon { display: inline-flex; flex-shrink: 0; }
 .persona-icon img { width: 20px; height: 20px; }
 .persona-stress, .persona-goal { padding: 14px 18px; border-radius: 10px; margin-bottom: 14px; }
 .persona-stress { background: #fff5f5; border-left: 3px solid #d97070; }
 .persona-goal   { background: #f0faf0; border-left: 3px solid #5aab6a; margin-bottom: 0; }
-.persona-stress-label, .persona-goal-label {
-  display: flex; align-items: center; gap: 8px;
-  font-size: 0.84rem; font-weight: 700; margin-bottom: 8px;
-  font-family: "Noto Sans JP", sans-serif;
-}
+.persona-stress-label, .persona-goal-label { display: flex; align-items: center; gap: 8px; font-size: 0.84rem; font-weight: 700; margin-bottom: 8px; }
 .persona-label-icon { display: inline-flex; flex-shrink: 0; }
 .persona-label-icon img { width: 20px; height: 20px; }
 .persona-stress-label { color: #a82020; }
@@ -313,43 +259,24 @@ h1, h2, h3,
 .persona-goal p { font-size: 0.92rem; color: #333; line-height: 1.85; font-weight: 300; }
 
 /* ===========================
-   Concept Flow
+   Flow / Step List
 =========================== */
 .concept-flow { display: flex; flex-direction: column; gap: 14px; }
-.concept-flow li {
+.concept-flow li, .step-list li {
   display: flex; gap: 18px; align-items: flex-start;
   background: #fff; border-radius: 12px; padding: 22px;
   box-shadow: 0 2px 10px rgba(80,40,120,0.07); border-left: 4px solid #9b72cf;
 }
-.flow-step {
-  flex-shrink: 0; min-width: 80px; background-color: #ede7f6;
+.flow-step, .step-num {
+  flex-shrink: 0; min-width: 72px; background-color: #ede7f6;
   color: #5b3a86; font-size: 0.74rem; font-weight: 700;
-  padding: 5px 8px; border-radius: 6px; text-align: center;
-  white-space: nowrap; font-family: "Noto Sans JP", sans-serif;
+  padding: 5px 8px; border-radius: 6px; text-align: center; white-space: nowrap;
 }
-.concept-flow li strong { display: block; font-size: 1rem; color: #2c2438; margin-bottom: 5px; font-family: "Noto Serif JP", serif; font-weight: 600; }
-.concept-flow li p { font-size: 0.88rem; color: #666; line-height: 1.75; font-weight: 300; }
+.concept-flow li strong, .step-list li strong { display: block; font-size: 1rem; color: #2c2438; margin-bottom: 5px; font-family: "Noto Serif JP", serif; font-weight: 600; }
+.concept-flow li p, .step-list li p { font-size: 0.88rem; color: #666; line-height: 1.75; font-weight: 300; }
 
 /* ===========================
-   Step List
-=========================== */
-.step-list { display: flex; flex-direction: column; gap: 16px; }
-.step-list li {
-  display: flex; gap: 18px; align-items: flex-start; padding: 22px;
-  background: #fff; border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(80,40,120,0.07); border-left: 4px solid #9b72cf;
-}
-.step-num {
-  flex-shrink: 0; min-width: 64px; background-color: #ede7f6;
-  color: #5b3a86; font-size: 0.74rem; font-weight: 700;
-  padding: 5px 8px; border-radius: 6px; text-align: center;
-  white-space: nowrap; font-family: "Noto Sans JP", sans-serif;
-}
-.step-list li strong { display: block; font-size: 1rem; color: #2c2438; margin-bottom: 4px; font-family: "Noto Serif JP", serif; font-weight: 600; }
-.step-list li p { font-size: 0.88rem; color: #666; line-height: 1.75; font-weight: 300; }
-
-/* ===========================
-   Time Table
+   Time Table / Checklist
 =========================== */
 .template-note { font-size: 0.88rem; color: #666; margin-bottom: 14px; line-height: 1.75; font-weight: 300; }
 .template-block { overflow-x: auto; -webkit-overflow-scrolling: touch; }
@@ -358,145 +285,101 @@ h1, h2, h3,
 .time-table td { padding: 14px 16px; border-bottom: 1px solid #ede5fa; color: #333; vertical-align: top; font-weight: 300; }
 .time-table tbody tr:last-child td { border-bottom: none; }
 .time-table tbody tr:hover { background-color: #faf5ff; }
-
-/* ===========================
-   Checklist
-=========================== */
 .checklist { display: flex; flex-direction: column; gap: 10px; }
 .checklist li {
   display: flex; align-items: center; gap: 10px;
   font-size: 0.96rem; color: #333; padding: 13px 18px;
-  background: #f7f3ff; border-radius: 10px; border-left: 3px solid #9b72cf;
-  font-weight: 300;
+  background: #f7f3ff; border-radius: 10px; border-left: 3px solid #9b72cf; font-weight: 300;
 }
 .checklist li::before { content: "□"; font-size: 1rem; color: #7c4dab; flex-shrink: 0; font-weight: 700; }
 
 /* ===========================
    CTA
 =========================== */
-.section-cta {
-  padding: 72px 0; text-align: center;
-  background: linear-gradient(135deg, #ede7f6, #fce4ec);
-}
-.section-cta h2 {
-  font-size: 1.6rem; color: #3d2060; margin-bottom: 14px;
-  font-weight: 600; letter-spacing: 0.04em;
-}
-.section-cta p { font-size: 0.96rem; color: #555; margin-bottom: 32px; line-height: 1.85; font-weight: 300; }
+.section-cta { padding: 72px 0; text-align: center; background: linear-gradient(135deg, #ede7f6, #fce4ec); }
+.section-cta h2 { font-size: 1.6rem; color: #3d2060; margin-bottom: 14px; font-weight: 600; letter-spacing: 0.04em; }
+.section-cta p  { font-size: 0.96rem; color: #555; margin-bottom: 32px; line-height: 1.85; font-weight: 300; }
 
 /* ===========================
    Footer
+   ルール: logo-footer.svgを使用。filter依存禁止
 =========================== */
 .footer {
   background: linear-gradient(160deg, #1e0e38 0%, #2a1050 100%);
-  color: #e8dff8;
-  padding: 52px 0 36px;
-  text-align: center;
-  border-top: 1px solid rgba(200,170,255,0.15);
+  color: #e8dff8; padding: 52px 0 36px; text-align: center;
+  border-top: 3px solid #6b3fa0;
 }
-
-.footer-tagline {
-  font-size: 0.8rem;
-  color: #c4a8e8;
-  letter-spacing: 0.18em;
-  margin-bottom: 28px;
-  font-family: "Noto Sans JP", sans-serif;
-  font-weight: 300;
-  text-transform: uppercase;
+.footer-logo { display: block; line-height: 0; }
+.footer-logo-img {
+  display: block; width: auto; height: 48px;
+  margin: 0 auto 22px; object-fit: contain;
 }
-
 .footer-nav {
   display: flex; flex-wrap: wrap; justify-content: center;
-  gap: 0; margin-bottom: 28px;
-  border-top: 1px solid rgba(200,170,255,0.12);
-  border-bottom: 1px solid rgba(200,170,255,0.12);
-  padding: 18px 0;
+  gap: 0; margin-bottom: 24px;
+  border-top: 1px solid rgba(200,170,255,0.15);
+  border-bottom: 1px solid rgba(200,170,255,0.15);
+  padding: 16px 0;
 }
 .footer-nav a {
-  color: #d8c8f4;
-  font-size: 0.85rem;
-  font-weight: 400;
-  letter-spacing: 0.06em;
-  padding: 6px 16px;
+  color: #d8c8f4; font-size: 0.85rem; font-weight: 400;
+  letter-spacing: 0.06em; padding: 6px 16px;
   border-right: 1px solid rgba(200,170,255,0.2);
   transition: color 0.2s;
-  font-family: "Noto Sans JP", sans-serif;
 }
 .footer-nav a:last-child { border-right: none; }
 .footer-nav a:hover { color: #fff; }
-
-.footer-copy {
-  font-size: 0.74rem; color: #9880c0;
-  letter-spacing: 0.1em; font-weight: 300;
-}
+.footer-copy { font-size: 0.74rem; color: #9880c0; letter-spacing: 0.1em; font-weight: 300; }
 
 /* ===========================
-   Responsive: Tablet （〜1024px）
+   Responsive: Tablet
 =========================== */
 @media (max-width: 1024px) {
-  .container        { max-width: 720px; padding: 0 28px; }
-  .page-title       { font-size: 1.5rem; }
-  .hero-catch       { font-size: 1.9rem; }
-  .section-hero     { min-height: 420px; }
-  .hero-overlay     { padding: 72px 0; }
-  .category-grid    { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-  .concept-cards    { grid-template-columns: repeat(2, 1fr); }
-  .genre-list       { grid-template-columns: repeat(2, 1fr); }
+  .container { max-width: 720px; padding: 0 28px; }
+  .page-title { font-size: 1.5rem; }
+  .hero-catch { font-size: 1.9rem; }
+  .section-hero { min-height: 420px; }
+  .hero-overlay { padding: 72px 0; }
+  .category-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .concept-cards { grid-template-columns: repeat(2, 1fr); }
+  .genre-list    { grid-template-columns: repeat(2, 1fr); }
   .concept-img-wrap { max-height: 360px; }
-  .section-white,
-  .section-lavender { padding: 52px 0; }
-  .section-cta      { padding: 60px 0; }
+  .section-white, .section-lavender { padding: 52px 0; }
+  .section-cta { padding: 60px 0; }
 }
 
 /* ===========================
-   Responsive: Mobile （〜767px）
+   Responsive: Mobile
 =========================== */
 @media (max-width: 767px) {
-  .container        { padding: 0 18px; }
-  .header           { padding: 20px 0 18px; }
-  .header-sub       { padding: 24px 0 20px; }
-  .page-title       { font-size: 1.3rem; }
-  .page-subtitle    { font-size: 0.9rem; }
-
-  .section-hero     { min-height: 320px; }
-  .hero-overlay     { padding: 48px 0; }
-  .hero-lead        { font-size: 0.72rem; letter-spacing: 0.2em; }
-  .hero-catch       { font-size: 1.45rem; margin-bottom: 14px; letter-spacing: 0.02em; }
-  .hero-sub         { font-size: 0.9rem; margin-bottom: 28px; }
-
-  .section-white,
-  .section-lavender,
-  .section-concept-img { padding: 44px 0; }
-  .section-cta          { padding: 52px 0; }
-  .section-title        { font-size: 1.2rem; margin-bottom: 24px; gap: 8px; }
+  .container { padding: 0 18px; }
+  .header { padding: 20px 0 18px; }
+  .header-sub { padding: 24px 0 20px; }
+  .page-title { font-size: 1.3rem; }
+  .page-subtitle { font-size: 0.9rem; }
+  .section-hero { min-height: 320px; }
+  .hero-overlay { padding: 48px 0; }
+  .hero-lead { font-size: 0.72rem; letter-spacing: 0.2em; }
+  .hero-catch { font-size: 1.45rem; margin-bottom: 14px; }
+  .hero-sub { font-size: 0.9rem; margin-bottom: 28px; }
+  .section-white, .section-lavender, .section-concept-img { padding: 44px 0; }
+  .section-cta { padding: 52px 0; }
+  .section-title { font-size: 1.2rem; margin-bottom: 24px; }
   .section-title-icon img { width: 24px; height: 24px; }
-
-  .category-grid    { grid-template-columns: 1fr; gap: 16px; }
+  .category-grid { grid-template-columns: 1fr; gap: 16px; }
   .category-card-img { height: 140px; }
-  .concept-cards    { grid-template-columns: 1fr; gap: 14px; }
-  .genre-list       { grid-template-columns: 1fr; gap: 12px; }
-  .concept-icon     { width: 48px; height: 48px; }
-
-  .concept-img-wrap    { max-height: 210px; border-radius: 12px; }
+  .concept-cards { grid-template-columns: 1fr; gap: 14px; }
+  .genre-list    { grid-template-columns: 1fr; gap: 12px; }
+  .concept-icon  { width: 48px; height: 48px; }
+  .concept-img-wrap { max-height: 210px; border-radius: 12px; }
   .concept-img-caption { font-size: 0.88rem; padding: 12px 16px; }
-
-  .step-list li,
-  .concept-flow li  { flex-direction: column; gap: 8px; }
-  .step-num, .flow-step { min-width: unset; width: fit-content; }
-
-  .persona-card     { max-width: 100%; padding: 20px; }
-
-  .btn-hero {
-    display: block; width: 100%; max-width: 320px;
-    margin: 0 auto; padding: 14px 20px; font-size: 0.92rem;
-  }
-
-  .footer           { padding: 40px 0 28px; }
-  .footer-nav       { gap: 0; }
-  .footer-nav a     { font-size: 0.8rem; padding: 6px 10px; border-right: none; }
-  .footer-nav       { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 4px 0; border: none; padding: 14px 0; }
-  .footer-nav a     { border-right: 1px solid rgba(200,170,255,0.2); }
-
-  .time-table th,
-  .time-table td    { padding: 10px 12px; font-size: 0.84rem; }
+  .concept-flow li, .step-list li { flex-direction: column; gap: 8px; }
+  .flow-step, .step-num { min-width: unset; width: fit-content; }
+  .persona-card { max-width: 100%; padding: 20px; }
+  .btn-hero { display: block; width: 100%; max-width: 320px; margin: 0 auto; padding: 14px 20px; font-size: 0.92rem; }
+  .footer { padding: 40px 0 28px; }
+  .footer-logo-img { height: 40px; }
+  .footer-nav { border: none; padding: 14px 0; }
+  .footer-nav a { font-size: 0.8rem; padding: 5px 10px; }
+  .time-table th, .time-table td { padding: 10px 12px; font-size: 0.84rem; }
 }

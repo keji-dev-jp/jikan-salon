@@ -1,26 +1,62 @@
 # jikan salon
 
-30代女性の時間整理サロン｜家事・仕事・プライベートをスマートに整える30日プログラムサイト
+時間を大切にする女性のためのライフスタイルメディア
+
+## GitHub Pages URL
+
+https://keji-dev-jp.github.io/jikan-salon/
+
+## 資産運用ルール
+
+- **サイト名 `jikan salon` は常に太字（font-weight: 700）で表示する**
+- **フッターロゴは `assets/img/logo-footer.svg` を専用資産として使用する**
+  - `filter: brightness / invert` での白化回避に依存しない
+  - 白い四角が表示された場合は即時修正する
+- **共通コンポーネント（ヘッダー・フッター）は `assets/js/components.js` で一元管理**
+- **ファイル追加・変更・削除時は必ず README も更新する**
 
 ## サイト構成
 
 ```
 jikan-salon/
-├── index.html                # トップページ（LP）
-├── concept/index.html        # コンセプト説明
-├── program/
-│   ├── 1-7day/index.html     # 1〜7日目
-│   ├── 8-14day/index.html    # 8〜14日目
-│   ├── 15-21day/index.html   # 15〜21日目
-│   └── 22-30day/index.html   # 22〜30日目
-├── templates/index.html      # テンプレートDL
-├── affiliate/index.html      # おすすめアイテム
-├── shop/index.html           # デジタル商品
-├── contact/index.html        # お問い合わせ
+├── index.html                    # トップページ
+├── concept/index.html            # コンセプト
+├── category/
+│   ├── beauty/index.html           # 美容・スキンケア
+│   ├── health/index.html           # 健康・ウェルネス
+│   ├── career/index.html           # キャリア・ワーク
+│   ├── interior/index.html         # インテリア・整理收納
+│   ├── lifestyle/index.html        # ライフスタイル
+│   └── time/index.html             # 時間術・干し方改善
+├── templates/index.html          # テンプレート
+├── affiliate/index.html          # おすすめアイテム
+├── shop/index.html               # デジタル商品
+├── contact/index.html            # お問い合わせ
 └── assets/
-    └── css/style.css         # 全体スタイル
+    ├── css/style.css               # 全体スタイル（共通）
+    ├── js/components.js           # ヘッダー・フッター共通コンポーネント
+    └── img/
+        ├── logo.png                # ヘッダー用ロゴ（明るい背景向け）
+        ├── logo-footer.svg         # フッター用ロゴ（暗い背景専用・白文字SVG）
+        ├── hero.png                # トップヒーロー画像
+        ├── concept.png             # コンセプトヘッダー画像
+        └── icons/                  # SVGアイコン一式
 ```
 
-## GitHub Pages URL
+## フォント方針
 
-https://keji-dev-jp.github.io/jikan-salon/
+| 用途 | フォント |
+|---|---|
+| 見出し・タイトル | Noto Serif JP |
+| 本文・UI | Noto Sans JP |
+
+## カテゴリ構成
+
+| カテゴリ | 内容 |
+|---|---|
+| Beauty | スキンケア・メイク・ヘアケア・ボディケア |
+| Health | 食事・睡眠・運動・ストレスケア |
+| Career | ワークスタイル・副業・スキルアップ |
+| Interior | 整理收納・インテリアコーデ |
+| Lifestyle | 趣味・旅行・お金地入れ |
+| Time | 時間術・ルーティン化・タスク管理 |

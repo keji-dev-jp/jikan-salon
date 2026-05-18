@@ -1,5 +1,9 @@
 /* ===========================
    jikan salon - 共通コンポーネント
+   ルール:
+   - サイト名「jikan salon」は常に太字表示
+   - フッターロゴは logo-footer.svg を使用（filter依存禁止）
+   - 資産変更時はREADMEも必ず更新
 =========================== */
 
 (function () {
@@ -17,6 +21,7 @@
             <a href="${ROOT}/index.html" class="header-logo">
               <img src="${ROOT}/assets/img/logo.png" alt="jikan salon" class="logo-img" />
             </a>
+            <p class="site-name"><strong>jikan salon</strong></p>
             <p class="site-subtitle">時間を大切にする女性のためのライフスタイルメディア</p>
           </div>
         </header>
@@ -32,6 +37,7 @@
         <header class="header-sub">
           <div class="container">
             <a href="${backHref}" class="back-link">← ${backLabel}</a>
+            <a href="${ROOT}/index.html" class="header-sub-brand"><strong>jikan salon</strong></a>
             ${phase    ? `<p class="program-phase">${phase}</p>`     : ''}
             <h1 class="page-title">${title}</h1>
             ${subtitle ? `<p class="page-subtitle">${subtitle}</p>` : ''}
@@ -48,7 +54,7 @@
       <footer class="footer">
         <div class="container">
           <a href="${ROOT}/index.html" class="footer-logo">
-            <img src="${ROOT}/assets/img/logo.png" alt="jikan salon" class="logo-img logo-img--footer" />
+            <img src="${ROOT}/assets/img/logo-footer.svg" alt="jikan salon" class="footer-logo-img" />
           </a>
           <nav class="footer-nav">
             <a href="${ROOT}/index.html">Topics</a>
