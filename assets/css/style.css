@@ -146,7 +146,7 @@ ul {
 }
 
 /* ===========================
-   Section: White
+   Sections
 =========================== */
 .section-white {
   padding: 48px 0;
@@ -157,17 +157,11 @@ ul {
   border-top: 1px solid #f0eaf8;
 }
 
-/* ===========================
-   Section: Lavender
-=========================== */
 .section-lavender {
   padding: 48px 0;
   background-color: #f9f5ff;
 }
 
-/* ===========================
-   Section Title
-=========================== */
 .section-title {
   font-size: 1.3rem;
   color: #5b3a86;
@@ -177,7 +171,7 @@ ul {
 }
 
 /* ===========================
-   Persona List
+   Persona List (Top)
 =========================== */
 .persona-list li {
   padding: 10px 0 10px 24px;
@@ -195,7 +189,168 @@ ul {
 }
 
 /* ===========================
-   Program Grid
+   Persona Card (Concept)
+=========================== */
+.persona-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  max-width: 560px;
+}
+
+.persona-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #5b3a86;
+  margin-bottom: 12px;
+}
+
+.persona-detail {
+  margin-bottom: 16px;
+}
+
+.persona-detail li {
+  font-size: 0.92rem;
+  color: #555;
+  padding: 4px 0;
+}
+
+.persona-stress {
+  background: #fff5f5;
+  border-left: 3px solid #e88;
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-bottom: 14px;
+}
+
+.persona-stress-label {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #c0392b;
+  margin-bottom: 8px;
+}
+
+.persona-stress li {
+  font-size: 0.9rem;
+  color: #555;
+  padding: 3px 0 3px 12px;
+  position: relative;
+}
+
+.persona-stress li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #e88;
+}
+
+.persona-goal {
+  background: #f0f9f0;
+  border-left: 3px solid #6abf7b;
+  padding: 12px 16px;
+  border-radius: 6px;
+}
+
+.persona-goal-label {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #2e7d32;
+  margin-bottom: 8px;
+}
+
+.persona-goal p {
+  font-size: 0.92rem;
+  color: #444;
+  line-height: 1.7;
+}
+
+/* ===========================
+   Concept Cards
+=========================== */
+.concept-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.concept-card {
+  background: #f9f5ff;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  border: 1px solid #e1d5f5;
+}
+
+.concept-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.concept-card h3 {
+  font-size: 1rem;
+  color: #5b3a86;
+  margin-bottom: 8px;
+}
+
+.concept-card p {
+  font-size: 0.88rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ===========================
+   Concept Flow (ol)
+=========================== */
+.concept-flow {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  counter-reset: flow-counter;
+}
+
+.concept-flow li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-left: 4px solid #9b72cf;
+}
+
+.flow-step {
+  display: inline-block;
+  min-width: 72px;
+  background-color: #ede7f6;
+  color: #7c4dab;
+  font-size: 0.78rem;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 6px;
+  text-align: center;
+  white-space: nowrap;
+  height: fit-content;
+}
+
+.concept-flow li strong {
+  display: block;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.concept-flow li p {
+  font-size: 0.88rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ===========================
+   Program Grid (Top)
 =========================== */
 .section-program {
   padding: 56px 0;
@@ -245,7 +400,7 @@ ul {
 }
 
 /* ===========================
-   Step List (1-7day index)
+   Step List
 =========================== */
 .step-list {
   display: flex;
@@ -435,5 +590,11 @@ ul {
   }
   .step-list li {
     flex-direction: column;
+  }
+  .concept-flow li {
+    flex-direction: column;
+  }
+  .concept-cards {
+    grid-template-columns: 1fr;
   }
 }
