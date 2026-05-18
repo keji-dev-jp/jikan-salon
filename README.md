@@ -41,7 +41,7 @@ jikan-salon/
     └── img/
         ├── logo.png                # ヘッダー用ロゴ（明るい背景向け）
         ├── logo-footer.svg         # フッター用ロゴ（暗い背景専用・SVG白文字）
-        ├── ogp.png                 # OGP・シェア用画像（要作成：1200×630px）
+        ├── ogp.png                 # OGP・シェア用画像（1200×630px）
         ├── hero.png                # トップヒーロー画像
         ├── concept.png             # コンセプトヘッダー画像
         └── icons/                  # SVGアイコン一式
@@ -68,6 +68,6 @@ jikan-salon/
 ## Phase進捗
 
 - [x] Phase 1: OGP/SEO・404・sitemap・robots.txt
-- [ ] Phase 2: カテゴリページ（6ページ）
+- [x] Phase 2: カテゴリページ（6ページ）
 - [ ] Phase 3: 記事テンプレート
 - [ ] Phase 4: アフィリエイト・デジタル商品・お問い合わせ
