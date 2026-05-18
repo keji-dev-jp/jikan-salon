@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>お問い合わせ | jikan salon</title>
+  <meta name="description" content="jikan salon へのお問い合わせはこちらから。記事のご感想・ご要望・コラボのご相談もお気軽にどうぞ。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="お問い合わせ | jikan salon" />
+  <meta property="og:description" content="jikan salon へのお問い合わせはこちらから。記事のご感想・ご要望・コラボのご相談もお気軽にどうぞ。" />
+  <meta property="og:url" content="https://keji-dev-jp.github.io/jikan-salon/contact/" />
+  <meta property="og:image" content="https://keji-dev-jp.github.io/jikan-salon/assets/img/ogp.png" />
+  <meta property="og:site_name" content="jikan salon" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="お問い合わせ | jikan salon" />
+  <meta name="twitter:description" content="jikan salon へのお問い合わせはこちらから。記事のご感想・ご要望・コラボのご相談もお気軽にどうぞ。" />
+  <meta name="twitter:image" content="https://keji-dev-jp.github.io/jikan-salon/assets/img/ogp.png" />
+  <link rel="canonical" href="https://keji-dev-jp.github.io/jikan-salon/contact/" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <div id="site-header"
+    data-type="sub"
+    data-phase="Contact"
+    data-title="お問い合わせ"
+    data-subtitle="ご感想・ご要望・コラボのご相談はお気軽にどうぞ"
+    data-back="/jikan-salon/index.html"
+    data-back-label="トップに戻る">
+  </div>
+
+  <main class="main">
+
+    <section class="section-white">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="section-title-icon"><img src="/jikan-salon/assets/img/icons/icon-person.svg" alt="" /></span>
+          お問い合わせ内容
+        </h2>
+        <div class="genre-list" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 40px;">
+          <div class="genre-item">
+            <span class="genre-badge">記事・コンテンツ</span>
+            <p>記事のご感想、修正のご指摘、取り上げてほしいテーマのご要望</p>
+          </div>
+          <div class="genre-item">
+            <span class="genre-badge">コラボ・PR</span>
+            <p>商品紹介・タイアップ・コラボレーションに関するご相談</p>
+          </div>
+          <div class="genre-item">
+            <span class="genre-badge">テンプレート</span>
+            <p>ダウンロードコンテンツに関するご質問・不具合のご報告</p>
+          </div>
+          <div class="genre-item">
+            <span class="genre-badge">その他</span>
+            <p>上記以外のお問い合わせもお気軽にどうぞ</p>
+          </div>
+        </div>
+
+        <!-- フォーム本体 -->
+        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+          <div class="contact-form-group">
+            <label class="contact-form-label" for="name">お名前 <span class="contact-form-required">必須</span></label>
+            <input class="contact-form-input" type="text" id="name" name="name" placeholder="山田 花子" required />
+          </div>
+
+          <div class="contact-form-group">
+            <label class="contact-form-label" for="email">メールアドレス <span class="contact-form-required">必須</span></label>
+            <input class="contact-form-input" type="email" id="email" name="email" placeholder="example@email.com" required />
+          </div>
+
+          <div class="contact-form-group">
+            <label class="contact-form-label" for="subject">お問い合わせ種別 <span class="contact-form-required">必須</span></label>
+            <select class="contact-form-input contact-form-select" id="subject" name="subject" required>
+              <option value="" disabled selected>選択してください</option>
+              <option value="content">記事・コンテンツについて</option>
+              <option value="collab">コラボ・PRのご相談</option>
+              <option value="template">テンプレートについて</option>
+              <option value="other">その他</option>
+            </select>
+          </div>
+
+          <div class="contact-form-group">
+            <label class="contact-form-label" for="message">お問い合わせ内容 <span class="contact-form-required">必須</span></label>
+            <textarea class="contact-form-input contact-form-textarea" id="message" name="message" rows="6" placeholder="お問い合わせ内容をご記入ください。" required></textarea>
+          </div>
+
+          <div class="contact-form-submit">
+            <button type="submit" class="btn-hero">送信する</button>
+          </div>
+
+        </form>
+
+        <p class="contact-form-note">※ 通常2〜3営業日以内にご返信いたします。<br>※ コラボ・PRのご相談は内容によってお断りする場合があります。</p>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="../assets/js/components.js"></script>
+</body>
+</html>

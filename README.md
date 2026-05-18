@@ -16,6 +16,7 @@ https://keji-dev-jp.github.io/jikan-salon/
 - **ファイル追加・変更・削除時は必ず README も更新する**
 - **絵文字アイコンは使用しない。SVGアイコン (`assets/img/icons/`) を使用する**
 - **記事ページは `article/` 以下に配置し、`article.css` を追加読み込みする**
+- **お問い合わせフォームは Formspree を使用。`YOUR_FORM_ID` を実際のIDに差し替える**
 
 ## サイト構成
 
@@ -54,12 +55,18 @@ jikan-salon/
 
 ## 記事ページの作り方
 
-1. `article/template/index.html` を複製する
+1. `article/template/index.html` をフォルダごとコピーする
 2. フォルダ名はスラッグ（英数字・ハイフン）にする　例: `article/morning-routine/`
-3. `<head>` 内のtitle・description・og・canonical を更新する
+3. `<head>` 内の title / description / og / canonical を更新する
 4. `data-phase` / `data-title` / `data-subtitle` / `data-back` を記事に合わせて更新する
 5. 本文を書き換える
 6. `sitemap.xml` に新しいURLを追記する
+
+## お問い合わせフォームの設定
+
+1. [Formspree](https://formspree.io/) でアカウントを作成する
+2. 新しいフォームを作成してフォームIDを取得する
+3. `contact/index.html` の `action="https://formspree.io/f/YOUR_FORM_ID"` を実際のIDに差し替える
 
 ## フォント方針
 
@@ -84,4 +91,4 @@ jikan-salon/
 - [x] Phase 1: OGP/SEO・404・sitemap・robots.txt
 - [x] Phase 2: カテゴリページ（6ページ）
 - [x] Phase 3: 記事テンプレート + article.css
-- [ ] Phase 4: アフィリエイト・デジタル商品・お問い合わせ
+- [x] Phase 4: アフィリエイト・デジタル商品・お問い合わせ
