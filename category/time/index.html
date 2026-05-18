@@ -19,21 +19,18 @@
   <link rel="canonical" href="https://keji-dev-jp.github.io/jikan-salon/category/time/" />
   <link rel="stylesheet" href="../../assets/css/style.css" />
   <style>
-    .category-thumb { width: 100%; max-height: 320px; object-fit: cover; object-position: center; display: block; }
+    .category-hero { position: relative; width: 100%; min-height: 320px; background-size: contain; background-repeat: no-repeat; background-position: center center; background-color: #faf7ff; display: flex; align-items: center; justify-content: center; }
+    .category-hero::after { content: ''; position: absolute; inset: 0; background: rgba(253, 250, 255, 0.55); }
+    .category-hero-label { position: relative; z-index: 1; text-align: center; padding: 24px 16px; }
+    .category-hero-label .hero-en { font-size: 0.75rem; letter-spacing: 0.28em; color: #6a359c; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 8px; }
+    .category-hero-label .hero-ja { font-size: 1.6rem; color: #3d2060; font-weight: 600; font-family: "Noto Serif JP", serif; display: block; }
   </style>
 </head>
 <body>
-  <div id="site-header"
-    data-type="sub"
-    data-phase="Time"
-    data-title="時間術・暮らし改善"
-    data-subtitle="忙しい毎日でも実践できる小さな時間管理のアイデア"
-    data-back="/jikan-salon/index.html"
-    data-back-label="Topicsに戻る">
+  <div id="site-header" data-type="sub" data-phase="Time" data-title="時間術・暮らし改善" data-subtitle="忙しい毎日でも実践できる小さな時間管理のアイデア" data-back="/jikan-salon/index.html" data-back-label="Topicsに戻る"></div>
+  <div class="category-hero" style="background-image: url('/jikan-salon/assets/img/topics/time.png');">
+    <div class="category-hero-label"><span class="hero-en">Time</span><span class="hero-ja">時間術・暮らし改善</span></div>
   </div>
-
-  <img class="category-thumb" src="/jikan-salon/assets/img/topics/time.png" alt="時間術・暮らし改善" />
-
   <main class="main">
     <section class="section-white"><div class="container"><h2 class="section-title"><span class="section-title-icon"><img src="/jikan-salon/assets/img/icons/icon-growth.svg" alt="" /></span>このカテゴリーについて</h2><p>時間管理・暮らし改善・スケジュール最適化…<br>忙しい毎日の中で自分の時間を場取りするためのアイデアをお届けします。</p></div></section>
     <section class="section-lavender"><div class="container"><h2 class="section-title"><span class="section-title-icon"><img src="/jikan-salon/assets/img/icons/icon-template.svg" alt="" /></span>ピックアップトピックス</h2><div class="concept-cards"><div class="concept-card"><span class="concept-icon"><img src="/jikan-salon/assets/img/icons/icon-growth.svg" alt="" /></span><h3>時間割り・優先リスト</h3><p>はじめたいことを形にする方法。優先リストで行動を加速。</p></div><div class="concept-card"><span class="concept-icon"><img src="/jikan-salon/assets/img/icons/icon-template.svg" alt="" /></span><h3>朝・夜のルーティン</h3><p>素敵な朝活・就寡前の習慣のつくり方。一日をリセットするルーティン。</p></div><div class="concept-card"><span class="concept-icon"><img src="/jikan-salon/assets/img/icons/icon-calendar.svg" alt="" /></span><h3>手帳・スケジュール術</h3><p>手帳・アプリを活用した時間管理。自分のペースで続けられる方法。</p></div></div></div></section>

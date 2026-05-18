@@ -19,11 +19,44 @@
   <link rel="canonical" href="https://keji-dev-jp.github.io/jikan-salon/category/beauty/" />
   <link rel="stylesheet" href="../../assets/css/style.css" />
   <style>
-    .category-thumb {
+    .category-hero {
+      position: relative;
       width: 100%;
-      max-height: 320px;
-      object-fit: cover;
-      object-position: center;
+      min-height: 320px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-color: #faf7ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .category-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(253, 250, 255, 0.55);
+    }
+    .category-hero-label {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 24px 16px;
+    }
+    .category-hero-label .hero-en {
+      font-size: 0.75rem;
+      letter-spacing: 0.28em;
+      color: #6a359c;
+      font-weight: 700;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 8px;
+    }
+    .category-hero-label .hero-ja {
+      font-size: 1.6rem;
+      color: #3d2060;
+      font-weight: 600;
+      font-family: "Noto Serif JP", serif;
       display: block;
     }
   </style>
@@ -38,7 +71,12 @@
     data-back-label="Topicsに戻る">
   </div>
 
-  <img class="category-thumb" src="/jikan-salon/assets/img/topics/beauty.png" alt="美容・スキンケア" />
+  <div class="category-hero" style="background-image: url('/jikan-salon/assets/img/topics/beauty.png');">
+    <div class="category-hero-label">
+      <span class="hero-en">Beauty</span>
+      <span class="hero-ja">美容・スキンケア</span>
+    </div>
+  </div>
 
   <main class="main">
     <section class="section-white">
@@ -50,39 +88,19 @@
         <p>スキンケア、メイク、ヘアケア、ボディケア…<br>「時間がない」と感じたまま後回しにしていた美容ケアを、少しずつ丁寧ににするヒントをお届けします。</p>
       </div>
     </section>
-
     <section class="section-lavender">
       <div class="container">
-        <h2 class="section-title">
-          <span class="section-title-icon"><img src="/jikan-salon/assets/img/icons/icon-template.svg" alt="" /></span>
-          ピックアップトピックス
-        </h2>
+        <h2 class="section-title"><span class="section-title-icon"><img src="/jikan-salon/assets/img/icons/icon-template.svg" alt="" /></span>ピックアップトピックス</h2>
         <div class="concept-cards">
-          <div class="concept-card">
-            <span class="concept-icon"><img src="/jikan-salon/assets/img/icons/icon-growth.svg" alt="" /></span>
-            <h3>スキンケア</h3>
-            <p>洗顔・保湿・日焦け対策。シンプルなルーティンで背中・首までうるおいスキンへ。</p>
-          </div>
-          <div class="concept-card">
-            <span class="concept-icon"><img src="/jikan-salon/assets/img/icons/icon-template.svg" alt="" /></span>
-            <h3>メイク</h3>
-            <p>5分で仕上がるプチプラメイクから、小物を使ったたったメイクまで。</p>
-          </div>
-          <div class="concept-card">
-            <span class="concept-icon"><img src="/jikan-salon/assets/img/icons/icon-calendar.svg" alt="" /></span>
-            <h3>ヘアケア</h3>
-            <p>トリートメントから日常ケアまで。忙しい中でもできるヘアケア流を紹介。</p>
-          </div>
+          <div class="concept-card"><span class="concept-icon"><img src="/jikan-salon/assets/img/icons/icon-growth.svg" alt="" /></span><h3>スキンケア</h3><p>洗顔・保湿・日焦け対策。シンプルなルーティンで背中・首までうるおいスキンへ。</p></div>
+          <div class="concept-card"><span class="concept-icon"><img src="/jikan-salon/assets/img/icons/icon-template.svg" alt="" /></span><h3>メイク</h3><p>5分で仕上がるプチプラメイクから、小物を使ったたったメイクまで。</p></div>
+          <div class="concept-card"><span class="concept-icon"><img src="/jikan-salon/assets/img/icons/icon-calendar.svg" alt="" /></span><h3>ヘアケア</h3><p>トリートメントから日常ケアまで。忙しい中でもできるヘアケア流を紹介。</p></div>
         </div>
       </div>
     </section>
-
     <section class="section-white">
       <div class="container">
-        <h2 class="section-title">
-          <span class="section-title-icon"><img src="/jikan-salon/assets/img/icons/icon-calendar.svg" alt="" /></span>
-          おすすめアイテム
-        </h2>
+        <h2 class="section-title"><span class="section-title-icon"><img src="/jikan-salon/assets/img/icons/icon-calendar.svg" alt="" /></span>おすすめアイテム</h2>
         <div class="step-list">
           <li><span class="step-num">Item 01</span><div><strong>プチプラ小顔メイクセット</strong><p>日常のメイクをすっきり簡単に。プロ監修のコスメ専門家がおすすめするアイテムを紹介。</p></div></li>
           <li><span class="step-num">Item 02</span><div><strong>プレミアム保湿クリーム</strong><p>乳液・クリーム・パックのベストバイ・アイテムを紹介。簡単に趣掴をアップ。</p></div></li>
@@ -90,16 +108,8 @@
         </div>
       </div>
     </section>
-
-    <section class="section-cta">
-      <div class="container">
-        <h2>ここから、女性のための情報を。</h2>
-        <p>他のカテゴリーも見てみましょう。</p>
-        <a href="/jikan-salon/index.html" class="btn-hero">Topics に戻る</a>
-      </div>
-    </section>
+    <section class="section-cta"><div class="container"><h2>ここから、女性のための情報を。</h2><p>他のカテゴリーも見てみましょう。</p><a href="/jikan-salon/index.html" class="btn-hero">Topics に戻る</a></div></section>
   </main>
-
   <div id="site-footer"></div>
   <script src="../../assets/js/components.js"></script>
 </body>

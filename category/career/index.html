@@ -19,21 +19,18 @@
   <link rel="canonical" href="https://keji-dev-jp.github.io/jikan-salon/category/career/" />
   <link rel="stylesheet" href="../../assets/css/style.css" />
   <style>
-    .category-thumb { width: 100%; max-height: 320px; object-fit: cover; object-position: center; display: block; }
+    .category-hero { position: relative; width: 100%; min-height: 320px; background-size: contain; background-repeat: no-repeat; background-position: center center; background-color: #faf7ff; display: flex; align-items: center; justify-content: center; }
+    .category-hero::after { content: ''; position: absolute; inset: 0; background: rgba(253, 250, 255, 0.55); }
+    .category-hero-label { position: relative; z-index: 1; text-align: center; padding: 24px 16px; }
+    .category-hero-label .hero-en { font-size: 0.75rem; letter-spacing: 0.28em; color: #6a359c; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 8px; }
+    .category-hero-label .hero-ja { font-size: 1.6rem; color: #3d2060; font-weight: 600; font-family: "Noto Serif JP", serif; display: block; }
   </style>
 </head>
 <body>
-  <div id="site-header"
-    data-type="sub"
-    data-phase="Career"
-    data-title="キャリア・ワーク"
-    data-subtitle="居心地よく働くための現場の工夫と将来のヒント"
-    data-back="/jikan-salon/index.html"
-    data-back-label="Topicsに戻る">
+  <div id="site-header" data-type="sub" data-phase="Career" data-title="キャリア・ワーク" data-subtitle="居心地よく働くための現場の工夫と将来のヒント" data-back="/jikan-salon/index.html" data-back-label="Topicsに戻る"></div>
+  <div class="category-hero" style="background-image: url('/jikan-salon/assets/img/topics/career.png');">
+    <div class="category-hero-label"><span class="hero-en">Career</span><span class="hero-ja">キャリア・ワーク</span></div>
   </div>
-
-  <img class="category-thumb" src="/jikan-salon/assets/img/topics/career.png" alt="キャリア・ワーク" />
-
   <main class="main">
     <section class="section-white"><div class="container"><h2 class="section-title"><span class="section-title-icon"><img src="/jikan-salon/assets/img/icons/icon-growth.svg" alt="" /></span>このカテゴリーについて</h2><p>ワークスタイル・将来設計・居心地よい主業選び…<br>女性が自分らしく輝けるためのキャリアヒントをお届けします。</p></div></section>
     <section class="section-lavender"><div class="container"><h2 class="section-title"><span class="section-title-icon"><img src="/jikan-salon/assets/img/icons/icon-template.svg" alt="" /></span>ピックアップトピックス</h2><div class="concept-cards"><div class="concept-card"><span class="concept-icon"><img src="/jikan-salon/assets/img/icons/icon-growth.svg" alt="" /></span><h3>ワークスタイル</h3><p>リモートワーク・剤務・フリーランス。自分に合った働き方を探る。</p></div><div class="concept-card"><span class="concept-icon"><img src="/jikan-salon/assets/img/icons/icon-template.svg" alt="" /></span><h3>スキルアップ</h3><p>副業・資格取得・オンライン学習。今日から始められるスキルアップ方法。</p></div><div class="concept-card"><span class="concept-icon"><img src="/jikan-salon/assets/img/icons/icon-calendar.svg" alt="" /></span><h3>キャリア設計</h3><p>5年後・10年後を見据えた将来設計。自分らしいキャリアの描き方。</p></div></div></div></section>

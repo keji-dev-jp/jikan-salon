@@ -19,21 +19,18 @@
   <link rel="canonical" href="https://keji-dev-jp.github.io/jikan-salon/category/lifestyle/" />
   <link rel="stylesheet" href="../../assets/css/style.css" />
   <style>
-    .category-thumb { width: 100%; max-height: 320px; object-fit: cover; object-position: center; display: block; }
+    .category-hero { position: relative; width: 100%; min-height: 320px; background-size: contain; background-repeat: no-repeat; background-position: center center; background-color: #faf7ff; display: flex; align-items: center; justify-content: center; }
+    .category-hero::after { content: ''; position: absolute; inset: 0; background: rgba(253, 250, 255, 0.55); }
+    .category-hero-label { position: relative; z-index: 1; text-align: center; padding: 24px 16px; }
+    .category-hero-label .hero-en { font-size: 0.75rem; letter-spacing: 0.28em; color: #6a359c; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 8px; }
+    .category-hero-label .hero-ja { font-size: 1.6rem; color: #3d2060; font-weight: 600; font-family: "Noto Serif JP", serif; display: block; }
   </style>
 </head>
 <body>
-  <div id="site-header"
-    data-type="sub"
-    data-phase="Lifestyle"
-    data-title="ライフスタイル"
-    data-subtitle="自分らしい毎日を作るためのヒント"
-    data-back="/jikan-salon/index.html"
-    data-back-label="Topicsに戻る">
+  <div id="site-header" data-type="sub" data-phase="Lifestyle" data-title="ライフスタイル" data-subtitle="自分らしい毎日を作るためのヒント" data-back="/jikan-salon/index.html" data-back-label="Topicsに戻る"></div>
+  <div class="category-hero" style="background-image: url('/jikan-salon/assets/img/topics/lifestyle.png');">
+    <div class="category-hero-label"><span class="hero-en">Lifestyle</span><span class="hero-ja">ライフスタイル</span></div>
   </div>
-
-  <img class="category-thumb" src="/jikan-salon/assets/img/topics/lifestyle.png" alt="ライフスタイル" />
-
   <main class="main">
     <section class="section-white"><div class="container"><h2 class="section-title"><span class="section-title-icon"><img src="/jikan-salon/assets/img/icons/icon-growth.svg" alt="" /></span>このカテゴリーについて</h2><p>趣味・旅行・お金・コミュニティ…<br>自分らしい毎日のリズムを作るための小さな工夫をお届けします。</p></div></section>
     <section class="section-lavender"><div class="container"><h2 class="section-title"><span class="section-title-icon"><img src="/jikan-salon/assets/img/icons/icon-template.svg" alt="" /></span>ピックアップトピックス</h2><div class="concept-cards"><div class="concept-card"><span class="concept-icon"><img src="/jikan-salon/assets/img/icons/icon-growth.svg" alt="" /></span><h3>趣味・居場所</h3><p>好きなことで心を満たす時間を設ける。新しい趣味の見つけ方。</p></div><div class="concept-card"><span class="concept-icon"><img src="/jikan-salon/assets/img/icons/icon-template.svg" alt="" /></span><h3>旅行・お出かけ</h3><p>忙しい中でも楽しめる旅行プラン。近場所から海外までの提案。</p></div><div class="concept-card"><span class="concept-icon"><img src="/jikan-salon/assets/img/icons/icon-calendar.svg" alt="" /></span><h3>お金・節約</h3><p>毎日の小さな節約から資産形成まで。お金と伴走するライフスタイル。</p></div></div></div></section>
