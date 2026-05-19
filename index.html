@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>jikan salon | 女性のためのライフスタイルメディア</title>
   <meta name="description" content="美容・健康・キャリア・インテリア…女性の毎日を少し豊かにする情報をお届けします。" />
-  <!-- OGP -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="jikan salon | 女性のためのライフスタイルメディア" />
   <meta property="og:description" content="美容・健康・キャリア・インテリア…女性の毎日を少し豊かにする情報をお届けします。" />
@@ -13,19 +12,125 @@
   <meta property="og:image" content="https://keji-dev-jp.github.io/jikan-salon/assets/img/ogp.png" />
   <meta property="og:site_name" content="jikan salon" />
   <meta property="og:locale" content="ja_JP" />
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="jikan salon | 女性のためのライフスタイルメディア" />
   <meta name="twitter:description" content="美容・健康・キャリア・インテリア…女性の毎日を少し豊かにする情報をお届けします。" />
   <meta name="twitter:image" content="https://keji-dev-jp.github.io/jikan-salon/assets/img/ogp.png" />
-  <!-- Canonical -->
   <link rel="canonical" href="https://keji-dev-jp.github.io/jikan-salon/" />
   <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    /* ===========================
+       Message Banner
+    =========================== */
+    .section-message {
+      background: linear-gradient(135deg, #ede7f6, #fce4ec);
+      padding: 40px 0;
+      text-align: center;
+      border-bottom: 1px solid #e0d0f0;
+    }
+    .message-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.28em;
+      color: #9b72cf;
+      font-weight: 700;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 12px;
+    }
+    .message-text {
+      font-size: 1.25rem;
+      color: #3d2060;
+      font-family: "Noto Serif JP", serif;
+      font-weight: 600;
+      line-height: 1.8;
+      letter-spacing: 0.06em;
+    }
+    .message-sub {
+      font-size: 0.85rem;
+      color: #7a5496;
+      margin-top: 10px;
+      font-weight: 300;
+      letter-spacing: 0.04em;
+    }
+
+    /* ===========================
+       About Section
+    =========================== */
+    .section-about {
+      padding: 72px 0;
+      background-color: #fff;
+    }
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+    .about-text .about-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.28em;
+      color: #9b72cf;
+      font-weight: 700;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 14px;
+    }
+    .about-text h2 {
+      font-size: 1.5rem;
+      color: #3d2060;
+      font-family: "Noto Serif JP", serif;
+      font-weight: 600;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      letter-spacing: 0.04em;
+    }
+    .about-text p {
+      font-size: 0.92rem;
+      color: #555;
+      line-height: 2;
+      font-weight: 300;
+    }
+    .about-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 24px;
+    }
+    .about-tag {
+      display: inline-block;
+      background: #f0eafa;
+      color: #6a359c;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 5px 16px;
+      border-radius: 20px;
+      letter-spacing: 0.08em;
+    }
+    .about-img-wrap {
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 28px rgba(80,40,120,0.12);
+    }
+    .about-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    @media (max-width: 767px) {
+      .about-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .about-text h2 { font-size: 1.25rem; }
+    }
+  </style>
 </head>
 <body>
 
   <div id="site-header" data-type="top"></div>
 
+  <!-- Hero -->
   <section class="section-hero" style="background-image: url('/jikan-salon/assets/img/hero.png');">
     <div class="hero-overlay">
       <div class="container">
@@ -37,8 +142,18 @@
     </div>
   </section>
 
+  <!-- ① Message Banner -->
+  <section class="section-message">
+    <div class="container">
+      <span class="message-label">Today's Message</span>
+      <p class="message-text">「忙しい」を言い訳にしない、<br>小さな自分時間のつくり方。</p>
+      <p class="message-sub">jikan salon は、女性の毎日に寄り添うライフスタイルメディアです。</p>
+    </div>
+  </section>
+
   <main class="main">
 
+    <!-- Topics -->
     <section class="section-white">
       <div class="container">
         <h2 class="section-title">Topics</h2>
@@ -49,7 +164,7 @@
             </div>
             <div class="category-card-body">
               <h3>美容・スキンケア</h3>
-              <p>スキンケア、メイク、ヘアケア…繋がる毎日の中でも続けられるビューティルーティンを提案。</p>
+              <p>スキンケア、メイク、ヘアケア…忙しい毎日でも続けられるビューティルーティンを提案。</p>
             </div>
           </a>
           <a href="category/health/index.html" class="category-card">
@@ -85,7 +200,7 @@
             </div>
             <div class="category-card-body">
               <h3>ライフスタイル</h3>
-              <p>趣味・旅行・お金地入れ…自分らしい毎日を作るためのヒントを集めました。</p>
+              <p>趣味・旅行・お金の使い方…自分らしい毎日を作るためのヒントを集めました。</p>
             </div>
           </a>
           <a href="category/time/index.html" class="category-card">
@@ -101,6 +216,7 @@
       </div>
     </section>
 
+    <!-- Concept Image -->
     <section class="section-concept-img">
       <div class="container">
         <div class="concept-img-wrap">
@@ -110,13 +226,38 @@
       </div>
     </section>
 
+    <!-- ② About -->
+    <section class="section-about">
+      <div class="container">
+        <div class="about-inner">
+          <div class="about-text">
+            <span class="about-label">About jikan salon</span>
+            <h2>「自分のこと、後回しに<br>していませんか？」</h2>
+            <p>jikan salon は、忙しい毎日を送る女性のために生まれたライフスタイルメディアです。<br><br>美容・健康・キャリア・インテリア・時間術…「やりたいけど後回し」になりがちなテーマを、実践しやすい形でお届けします。<br><br>小さな習慣の積み重ねが、少しずつ毎日を変えていく。そんな変化を、一緒に楽しんでいきましょう。</p>
+            <div class="about-tags">
+              <span class="about-tag">#美容</span>
+              <span class="about-tag">#健康</span>
+              <span class="about-tag">#キャリア</span>
+              <span class="about-tag">#インテリア</span>
+              <span class="about-tag">#時間術</span>
+              <span class="about-tag">#ライフスタイル</span>
+            </div>
+          </div>
+          <div class="about-img-wrap">
+            <img src="assets/img/concept.png" alt="jikan salon について" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- jikan salon とは -->
     <section class="section-lavender">
       <div class="container">
         <h2 class="section-title">jikan salon とは</h2>
         <div class="concept-cards">
           <div class="concept-card">
             <span class="concept-icon"><img src="/jikan-salon/assets/img/icons/icon-growth.svg" alt="" /></span>
-            <h3>女性の毎日に寒いを添える</h3>
+            <h3>女性の毎日に彩りを添える</h3>
             <p>「忙しくて自分のことが後回し」にならないよう、実践しやすい情報を提供します。</p>
           </div>
           <div class="concept-card">
@@ -133,9 +274,10 @@
       </div>
     </section>
 
+    <!-- CTA -->
     <section class="section-cta">
       <div class="container">
-        <h2>あなたの毎日に、少しだけ寒いを。</h2>
+        <h2>あなたの毎日に、少しだけ彩りを。</h2>
         <p>常識をアップデートして、より自分らしい毎日へ。</p>
         <a href="concept/index.html" class="btn-hero">jikan salon について</a>
       </div>
