@@ -1,58 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- トップページ -->
   <url>
     <loc>https://keji-dev-jp.github.io/jikan-salon/</loc>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- 固定ページ -->
   <url>
     <loc>https://keji-dev-jp.github.io/jikan-salon/concept/</loc>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://keji-dev-jp.github.io/jikan-salon/about/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://keji-dev-jp.github.io/jikan-salon/contact/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://keji-dev-jp.github.io/jikan-salon/affiliate/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- カテゴリーページ -->
+  <url>
     <loc>https://keji-dev-jp.github.io/jikan-salon/category/beauty/</loc>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://keji-dev-jp.github.io/jikan-salon/category/health/</loc>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://keji-dev-jp.github.io/jikan-salon/category/career/</loc>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://keji-dev-jp.github.io/jikan-salon/category/interior/</loc>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://keji-dev-jp.github.io/jikan-salon/category/lifestyle/</loc>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://keji-dev-jp.github.io/jikan-salon/category/time/</loc>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- 記事ページ -->
   <url>
-    <loc>https://keji-dev-jp.github.io/jikan-salon/affiliate/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://keji-dev-jp.github.io/jikan-salon/shop/</loc>
+    <loc>https://keji-dev-jp.github.io/jikan-salon/article/beauty-skincare-5min/</loc>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://keji-dev-jp.github.io/jikan-salon/contact/</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://keji-dev-jp.github.io/jikan-salon/article/health-sleep-habits/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://keji-dev-jp.github.io/jikan-salon/article/career-wfh-focus/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://keji-dev-jp.github.io/jikan-salon/article/interior-storage-tips/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://keji-dev-jp.github.io/jikan-salon/article/lifestyle-kakeibo/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://keji-dev-jp.github.io/jikan-salon/article/time-morning-routine/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
 </urlset>

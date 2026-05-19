@@ -1,94 +1,118 @@
 # jikan salon
 
-時間を大切にする女性のためのライフスタイルメディア
+> 女性の毎日を豊かにする、ライフスタイル情報メディア
 
-## GitHub Pages URL
+**URL:** https://keji-dev-jp.github.io/jikan-salon/
 
-https://keji-dev-jp.github.io/jikan-salon/
+---
 
-## 資産運用ルール
-
-- **サイト名 `jikan salon` は常に太字（font-weight: 700）で表示する**
-- **フッターロゴは `assets/img/logo-footer.svg` を専用資産として使用する**
-  - `filter: brightness / invert` での白化回避に依存しない
-  - 白い四角が表示された場合は即時修正する
-- **共通コンポーネント（ヘッダー・フッター）は `assets/js/components.js` で一元管理**
-- **ファイル追加・変更・削除時は必ず README も更新する**
-- **絵文字アイコンは使用しない。SVGアイコン (`assets/img/icons/`) を使用する**
-- **記事ページは `article/` 以下に配置し、`article.css` を追加読み込みする**
-- **お問い合わせフォームは Formspree を使用。`YOUR_FORM_ID` を実際のIDに差し替える**
-
-## サイト構成
+## 📁 フォルダ構成
 
 ```
 jikan-salon/
-├── index.html                    # トップページ
-├── concept/index.html            # コンセプト
-├── category/
-│   ├── beauty/index.html         # 美容・スキンケア
-│   ├── health/index.html         # 健康・ウェルネス
-│   ├── career/index.html         # キャリア・ワーク
-│   ├── interior/index.html       # インテリア・整理収納
-│   ├── lifestyle/index.html      # ライフスタイル
-│   └── time/index.html           # 時間術・干し方改善
-├── article/
-│   └── template/index.html       # 記事テンプレート（複製して使用）
-├── affiliate/index.html          # おすすめアイテム
-├── shop/index.html               # デジタル商品
-├── contact/index.html            # お問い合わせ
-├── 404.html                      # 404ページ
-├── sitemap.xml                   # SEOサイトマップ
-├── robots.txt                    # クローラー設定
-└── assets/
+├── index.html              # トップページ
+├── sitemap.xml             # SEO用サイトマップ
+├── robots.txt              # クローラー設定
+├── 404.html                # 404エラーページ
+├── README.md               # このファイル（設計書）
+│
+├── about/                  # 運営者情報ページ
+├── privacy/                # プライバシーポリシーページ
+├── concept/                # コンセプトページ
+├── contact/                # お問い合わせページ
+│
+├── category/               # カテゴリー一覧ページ（6カテゴリー）
+│   ├── beauty/
+│   ├── health/
+│   ├── career/
+│   ├── interior/
+│   ├── lifestyle/
+│   └── time/
+│
+├── article/                # 記事ページ（スラッグ名でフォルダ管理）
+│   ├── beauty-skincare-5min/
+│   ├── health-sleep-habits/
+│   ├── career-wfh-focus/
+│   ├── interior-storage-tips/
+│   ├── lifestyle-kakeibo/
+│   └── time-morning-routine/
+│
+├── affiliate/              # アフィリエイト紹介ページ
+├── program/                # プログラム・特集ページ
+│   └── 1-7day/
+├── shop/                   # ショップ・商品紹介ページ
+│
+└── assets/                 # 静的アセット
     ├── css/
-    │   ├── style.css             # 全体スタイル（共通）
-    │   └── article.css           # 記事ページ専用スタイル
-    ├── js/components.js          # ヘッダー・フッター共通コンポーネント
+    │   ├── style.css       # 共通スタイル
+    │   └── article.css     # 記事ページ用スタイル
+    ├── js/
+    │   └── components.js   # ヘッダー・フッター共通コンポーネント
     └── img/
-        ├── logo.png              # ヘッダー用ロゴ（明るい背景向け）
-        ├── logo-footer.svg       # フッター用ロゴ（暗い背景専用・SVG白文字）
-        ├── ogp.png               # OGP・シェア用画像（1200×630px）
-        ├── hero.png              # トップヒーロー画像
-        ├── concept.png           # コンセプトヘッダー画像
-        └── icons/                # SVGアイコン一式
+        ├── topics/         # カテゴリーサムネイル画像
+        └── article/        # 記事サムネイル画像（スラッグ名.png）
 ```
 
-## 記事ページの作り方
+---
 
-1. `article/template/index.html` をフォルダごとコピーする
-2. フォルダ名はスラッグ（英数字・ハイフン）にする　例: `article/morning-routine/`
-3. `<head>` 内の title / description / og / canonical を更新する
-4. `data-phase` / `data-title` / `data-subtitle` / `data-back` を記事に合わせて更新する
-5. 本文を書き換える
-6. `sitemap.xml` に新しいURLを追記する
+## 🏷️ 命名規則
 
-## お問い合わせフォームの設定
+| 種別 | 命名ルール | 例 |
+|---|---|---|
+| 記事フォルダ | `{カテゴリー}-{内容}-{キーワード}` | `beauty-skincare-5min` |
+| 記事サムネイル | `{記事スラッグ}.png` | `beauty-skincare-5min.png` |
+| カテゴリー画像 | `{カテゴリー名小文字}.png` | `beauty.png` |
+| CSSファイル | `{用途}.css` | `article.css` |
 
-1. [Formspree](https://formspree.io/) でアカウントを作成する
-2. 新しいフォームを作成してフォームIDを取得する
-3. `contact/index.html` の `action="https://formspree.io/f/YOUR_FORM_ID"` を実際のIDに差し替える
+---
 
-## フォント方針
+## ✅ 記事追加チェックリスト
 
-| 用途 | フォント |
+新しい記事を追加する際は以下を確認してください：
+
+- [ ] `article/{スラッグ}/index.html` を作成
+- [ ] `assets/img/article/{スラッグ}.png` をアップロード
+- [ ] 記事HTML内のOGP画像パスを正しく設定
+- [ ] `sitemap.xml` に新URLを追記・`lastmod` を更新
+- [ ] カテゴリーページ（`category/{カテゴリー}/index.html`）に記事カードを追加
+- [ ] トップページ（`index.html`）のトピックスセクションを更新（必要に応じて）
+
+---
+
+## 📄 主要ページ一覧
+
+| ページ | URL | 備考 |
+|---|---|---|
+| トップ | `/` | |
+| コンセプト | `/concept/` | |
+| カテゴリー（Beauty） | `/category/beauty/` | |
+| カテゴリー（Health） | `/category/health/` | |
+| カテゴリー（Career） | `/category/career/` | |
+| カテゴリー（Interior） | `/category/interior/` | |
+| カテゴリー（Lifestyle） | `/category/lifestyle/` | |
+| カテゴリー（Time） | `/category/time/` | |
+| アフィリエイト | `/affiliate/` | |
+| お問い合わせ | `/contact/` | |
+| 運営者情報 | `/about/` | AdSense審査用 |
+| プライバシーポリシー | `/privacy/` | AdSense審査用 |
+
+---
+
+## 🗓️ 更新履歴
+
+| 日付 | 内容 |
 |---|---|
-| 見出し・タイトル | Noto Serif JP |
-| 本文・UI | Noto Sans JP |
+| 2026-05-19 | 記事6本追加（Beauty/Health/Career/Interior/Lifestyle/Time） |
+| 2026-05-19 | プライバシーポリシー・運営者情報ページ追加 |
+| 2026-05-19 | assets/img/article/ フォルダ作成 |
+| 2026-05-19 | README・sitemap更新、ドキュメント整備 |
 
-## カテゴリ構成
+---
 
-| カテゴリ | 内容 |
-|---|---|
-| Beauty | スキンケア・メイク・ヘアケア・ボディケア |
-| Health | 食事・睡眠・運動・ストレスケア |
-| Career | ワークスタイル・副業・スキルアップ |
-| Interior | 整理収納・インテリアコーデ |
-| Lifestyle | 趣味・旅行・お金地入れ |
-| Time | 時間術・ルーティン化・タスク管理 |
+## 🚀 今後の予定
 
-## Phase進捗
-
-- [x] Phase 1: OGP/SEO・404・sitemap・robots.txt
-- [x] Phase 2: カテゴリページ（6ページ）
-- [x] Phase 3: 記事テンプレート + article.css
-- [x] Phase 4: アフィリエイト・デジタル商品・お問い合わせ
+- [ ] 独自ドメイン取得 → Google AdSense申請
+- [ ] 各記事サムネイル画像のアップロード・OGP差し替え
+- [ ] カテゴリーページへの記事カード追加
+- [ ] sitemap.xml の定期更新
+- [ ] 記事の追加（各カテゴリー2本目以降）
