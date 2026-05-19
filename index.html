@@ -19,118 +19,28 @@
   <link rel="canonical" href="https://keji-dev-jp.github.io/jikan-salon/" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <style>
-    /* ===========================
-       Message Banner
-    =========================== */
-    .section-message {
-      background: linear-gradient(135deg, #ede7f6, #fce4ec);
-      padding: 40px 0;
-      text-align: center;
-      border-bottom: 1px solid #e0d0f0;
-    }
-    .message-label {
-      font-size: 0.72rem;
-      letter-spacing: 0.28em;
-      color: #9b72cf;
-      font-weight: 700;
-      text-transform: uppercase;
-      display: block;
-      margin-bottom: 12px;
-    }
-    .message-text {
-      font-size: 1.25rem;
-      color: #3d2060;
-      font-family: "Noto Serif JP", serif;
-      font-weight: 600;
-      line-height: 1.8;
-      letter-spacing: 0.06em;
-    }
-    .message-sub {
-      font-size: 0.85rem;
-      color: #7a5496;
-      margin-top: 10px;
-      font-weight: 300;
-      letter-spacing: 0.04em;
-    }
-
-    /* ===========================
-       About Section
-    =========================== */
-    .section-about {
-      padding: 72px 0;
-      background-color: #fff;
-    }
-    .about-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 56px;
-      align-items: center;
-    }
-    .about-text .about-label {
-      font-size: 0.72rem;
-      letter-spacing: 0.28em;
-      color: #9b72cf;
-      font-weight: 700;
-      text-transform: uppercase;
-      display: block;
-      margin-bottom: 14px;
-    }
-    .about-text h2 {
-      font-size: 1.5rem;
-      color: #3d2060;
-      font-family: "Noto Serif JP", serif;
-      font-weight: 600;
-      line-height: 1.7;
-      margin-bottom: 20px;
-      letter-spacing: 0.04em;
-    }
-    .about-text p {
-      font-size: 0.92rem;
-      color: #555;
-      line-height: 2;
-      font-weight: 300;
-    }
-    .about-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 24px;
-    }
-    .about-tag {
-      display: inline-block;
-      background: #f0eafa;
-      color: #6a359c;
-      font-size: 0.78rem;
-      font-weight: 700;
-      padding: 5px 16px;
-      border-radius: 20px;
-      letter-spacing: 0.08em;
-    }
-    .about-img-wrap {
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 8px 28px rgba(80,40,120,0.12);
-    }
-    .about-img-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+    .section-message { background: linear-gradient(135deg, #ede7f6, #fce4ec); padding: 40px 0; text-align: center; border-bottom: 1px solid #e0d0f0; }
+    .message-label { font-size: 0.72rem; letter-spacing: 0.28em; color: #9b72cf; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 12px; }
+    .message-text { font-size: 1.25rem; color: #3d2060; font-family: "Noto Serif JP", serif; font-weight: 600; line-height: 1.8; letter-spacing: 0.06em; }
+    .message-sub { font-size: 0.85rem; color: #7a5496; margin-top: 10px; font-weight: 300; letter-spacing: 0.04em; }
+    .section-about { padding: 72px 0; background-color: #fff; }
+    .about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+    .about-text .about-label { font-size: 0.72rem; letter-spacing: 0.28em; color: #9b72cf; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 14px; }
+    .about-text h2 { font-size: 1.5rem; color: #3d2060; font-family: "Noto Serif JP", serif; font-weight: 600; line-height: 1.7; margin-bottom: 20px; letter-spacing: 0.04em; }
+    .about-text p { font-size: 0.92rem; color: #555; line-height: 2; font-weight: 300; }
+    .about-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+    .about-tag { display: inline-block; background: #f0eafa; color: #6a359c; font-size: 0.78rem; font-weight: 700; padding: 5px 16px; border-radius: 20px; letter-spacing: 0.08em; }
+    .about-img-wrap { border-radius: 18px; overflow: hidden; box-shadow: 0 8px 28px rgba(80,40,120,0.12); }
+    .about-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
     @media (max-width: 767px) {
-      .about-inner {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
+      .about-inner { grid-template-columns: 1fr; gap: 32px; }
       .about-text h2 { font-size: 1.25rem; }
     }
   </style>
 </head>
 <body>
-
   <div id="site-header" data-type="top"></div>
 
-  <!-- Hero -->
   <section class="section-hero" style="background-image: url('/jikan-salon/assets/img/hero.png');">
     <div class="hero-overlay">
       <div class="container">
@@ -142,7 +52,6 @@
     </div>
   </section>
 
-  <!-- ① Message Banner -->
   <section class="section-message">
     <div class="container">
       <span class="message-label">Today's Message</span>
@@ -152,71 +61,38 @@
   </section>
 
   <main class="main">
-
-    <!-- Topics -->
     <section class="section-white">
       <div class="container">
         <h2 class="section-title">Topics</h2>
         <div class="category-grid">
           <a href="category/beauty/index.html" class="category-card">
-            <div class="category-card-img" style="background-image: url('/jikan-salon/assets/img/topics/beauty.png');">
-              <span class="category-label">Beauty</span>
-            </div>
-            <div class="category-card-body">
-              <h3>美容・スキンケア</h3>
-              <p>スキンケア、メイク、ヘアケア…忙しい毎日でも続けられるビューティルーティンを提案。</p>
-            </div>
+            <div class="category-card-img" style="background-image: url('/jikan-salon/assets/img/topics/beauty.png');"><span class="category-label">Beauty</span></div>
+            <div class="category-card-body"><h3>美容・スキンケア</h3><p>スキンケア、メイク、ヘアケア…忙しい毎日でも続けられるビューティルーティンを提案。</p></div>
           </a>
           <a href="category/health/index.html" class="category-card">
-            <div class="category-card-img" style="background-image: url('/jikan-salon/assets/img/topics/health.png');">
-              <span class="category-label">Health</span>
-            </div>
-            <div class="category-card-body">
-              <h3>健康・ウェルネス</h3>
-              <p>高いパフォーマンスを維持する小さな習慣。食事・睡眠・ストレスケアのヒント。</p>
-            </div>
+            <div class="category-card-img" style="background-image: url('/jikan-salon/assets/img/topics/health.png');"><span class="category-label">Health</span></div>
+            <div class="category-card-body"><h3>健康・ウェルネス</h3><p>高いパフォーマンスを維持する小さな習慣。食事・睡眠・ストレスケアのヒント。</p></div>
           </a>
           <a href="category/career/index.html" class="category-card">
-            <div class="category-card-img" style="background-image: url('/jikan-salon/assets/img/topics/career.png');">
-              <span class="category-label">Career</span>
-            </div>
-            <div class="category-card-body">
-              <h3>キャリア・ワーク</h3>
-              <p>居心地よく働くための現場の工夫、将来を考えるためのヒント。</p>
-            </div>
+            <div class="category-card-img" style="background-image: url('/jikan-salon/assets/img/topics/career.png');"><span class="category-label">Career</span></div>
+            <div class="category-card-body"><h3>キャリア・ワーク</h3><p>居心地よく働くための現場の工夫、将来を考えるためのヒント。</p></div>
           </a>
           <a href="category/interior/index.html" class="category-card">
-            <div class="category-card-img" style="background-image: url('/jikan-salon/assets/img/topics/interior.png');">
-              <span class="category-label">Interior</span>
-            </div>
-            <div class="category-card-body">
-              <h3>インテリア・整理収納</h3>
-              <p>居心地よい空間が、毎日のリズムを整える。片付け・インテリアのアイデア。</p>
-            </div>
+            <div class="category-card-img" style="background-image: url('/jikan-salon/assets/img/topics/interior.png');"><span class="category-label">Interior</span></div>
+            <div class="category-card-body"><h3>インテリア・整理収納</h3><p>居心地よい空間が、毎日のリズムを整える。片付け・インテリアのアイデア。</p></div>
           </a>
           <a href="category/lifestyle/index.html" class="category-card">
-            <div class="category-card-img" style="background-image: url('/jikan-salon/assets/img/topics/lifestyle.png');">
-              <span class="category-label">Lifestyle</span>
-            </div>
-            <div class="category-card-body">
-              <h3>ライフスタイル</h3>
-              <p>趣味・旅行・お金の使い方…自分らしい毎日を作るためのヒントを集めました。</p>
-            </div>
+            <div class="category-card-img" style="background-image: url('/jikan-salon/assets/img/topics/lifestyle.png');"><span class="category-label">Lifestyle</span></div>
+            <div class="category-card-body"><h3>ライフスタイル</h3><p>趣味・旅行・お金の使い方…自分らしい毎日を作るためのヒントを集めました。</p></div>
           </a>
           <a href="category/time/index.html" class="category-card">
-            <div class="category-card-img" style="background-image: url('/jikan-salon/assets/img/topics/time.png');">
-              <span class="category-label">Time</span>
-            </div>
-            <div class="category-card-body">
-              <h3>時間術・暮らし改善</h3>
-              <p>忙しい毎日でも実践できる、小さな時間管理のアイデア。</p>
-            </div>
+            <div class="category-card-img" style="background-image: url('/jikan-salon/assets/img/topics/time.png');"><span class="category-label">Time</span></div>
+            <div class="category-card-body"><h3>時間術・暮らし改善</h3><p>忙しい毎日でも実践できる、小さな時間管理のアイデア。</p></div>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Concept Image -->
     <section class="section-concept-img">
       <div class="container">
         <div class="concept-img-wrap">
@@ -226,7 +102,6 @@
       </div>
     </section>
 
-    <!-- ② About -->
     <section class="section-about">
       <div class="container">
         <div class="about-inner">
@@ -244,13 +119,12 @@
             </div>
           </div>
           <div class="about-img-wrap">
-            <img src="assets/img/concept.png" alt="jikan salon について" />
+            <img src="assets/img/about.png" alt="jikan salon について" />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- jikan salon とは -->
     <section class="section-lavender">
       <div class="container">
         <h2 class="section-title">jikan salon とは</h2>
@@ -274,7 +148,6 @@
       </div>
     </section>
 
-    <!-- CTA -->
     <section class="section-cta">
       <div class="container">
         <h2>あなたの毎日に、少しだけ彩りを。</h2>
@@ -282,7 +155,6 @@
         <a href="concept/index.html" class="btn-hero">jikan salon について</a>
       </div>
     </section>
-
   </main>
 
   <div id="site-footer"></div>
