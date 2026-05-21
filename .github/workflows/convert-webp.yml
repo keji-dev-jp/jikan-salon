@@ -4,6 +4,16 @@ on:
   push:
     paths:
       - 'assets/img/**/*.png'
+  workflow_dispatch:
+    inputs:
+      convert_all:
+        description: '全てのPNGを変換する（既存分を含む）'
+        required: false
+        default: 'true'
+        type: choice
+        options:
+          - 'true'
+          - 'false'
 
 jobs:
   convert:
@@ -20,23 +30,33 @@ jobs:
       - name: Install cwebp
         run: sudo apt-get install -y webp
 
-      - name: Convert new/changed PNGs to WebP
+      - name: Convert PNGs to WebP
         run: |
-          # 直前のコミットで追加・変更されたPNGを取得
-          git diff --name-only --diff-filter=ACM HEAD~1 HEAD -- '*.png' | while read file; do
-            if [ -f "$file" ]; then
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.convert_all }}" = "true" ]; then
+            # 手動実行：全てのPNGを変換
+            echo "Mode: Convert ALL PNGs"
+            find assets/img -name '*.png' | while read file; do
               webp_file="${file%.png}.webp"
               cwebp -q 85 "$file" -o "$webp_file"
               echo "Converted: $file -> $webp_file"
-            fi
-          done
+            done
+          else
+            # pushトリガー：変更分のPNGのみ変換
+            echo "Mode: Convert changed PNGs only"
+            git diff --name-only --diff-filter=ACM HEAD~1 HEAD -- '*.png' | while read file; do
+              if [ -f "$file" ]; then
+                webp_file="${file%.png}.webp"
+                cwebp -q 85 "$file" -o "$webp_file"
+                echo "Converted: $file -> $webp_file"
+              fi
+            done
+          fi
 
       - name: Commit WebP files
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add assets/img/**/*.webp
-          # 変換ファイルがある場合のみコミット
           if git diff --cached --quiet; then
             echo "No new WebP files to commit."
           else
