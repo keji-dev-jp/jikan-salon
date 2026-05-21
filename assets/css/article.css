@@ -9,7 +9,7 @@
 /* アイキャッチ */
 .article-eyecatch {
   width: 100%;
-  aspect-ratio: 16 / 7;
+  aspect-ratio: 16 / 5;
   background: #f0ebfa;
   overflow: hidden;
 }
