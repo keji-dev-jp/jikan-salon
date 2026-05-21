@@ -36,6 +36,72 @@
       .about-inner { grid-template-columns: 1fr; gap: 32px; }
       .about-text h2 { font-size: 1.25rem; }
     }
+
+    /* ── 最近の記事セクション ── */
+    .section-recent { padding: 56px 0 48px; background-color: #faf9f7; }
+    .section-recent .section-title { margin-bottom: 32px; }
+    .recent-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .recent-card {
+      display: block;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(80,40,120,0.07);
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .recent-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(80,40,120,0.13);
+    }
+    .recent-card-img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+    }
+    .recent-card-body {
+      padding: 14px 16px 16px;
+    }
+    .recent-card-badge {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #9b72cf;
+      background: #f0eafa;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+    }
+    .recent-card-title {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #3d2060;
+      line-height: 1.55;
+      margin: 0;
+    }
+    .recent-more {
+      text-align: right;
+      margin-top: 24px;
+    }
+    .recent-more a {
+      font-size: 0.82rem;
+      color: #9b72cf;
+      font-weight: 600;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
+    .recent-more a:hover { text-decoration: underline; }
+    @media (max-width: 767px) {
+      .recent-grid { grid-template-columns: 1fr; gap: 14px; }
+    }
   </style>
 </head>
 <body>
@@ -89,6 +155,39 @@
             <div class="category-card-img" style="background-image: url('/jikan-salon/assets/img/topics/time.png');"><span class="category-label">Time</span></div>
             <div class="category-card-body"><h3>時間術・暮らし改善</h3><p>忙しい毎日でも実践できる、小さな時間管理のアイデア。</p></div>
           </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 最近の記事 -->
+    <section class="section-recent">
+      <div class="container">
+        <h2 class="section-title">最近の記事</h2>
+        <div class="recent-grid">
+          <a href="article/beauty-haircare-weekly/index.html" class="recent-card">
+            <img src="assets/img/article/beauty-haircare-weekly.png" alt="週1ヘアケア習慣" class="recent-card-img" width="400" height="225" loading="lazy" />
+            <div class="recent-card-body">
+              <span class="recent-card-badge">Beauty</span>
+              <p class="recent-card-title">週1ヘアケアで変わる、髪のツヤと手触り</p>
+            </div>
+          </a>
+          <a href="article/health-breakfast-mistakes/index.html" class="recent-card">
+            <img src="assets/img/article/health-breakfast-mistakes.png" alt="朝食のNG習慣" class="recent-card-img" width="400" height="225" loading="lazy" />
+            <div class="recent-card-body">
+              <span class="recent-card-badge">Health</span>
+              <p class="recent-card-title">やりがちな朝食のNG習慣、見直してみませんか</p>
+            </div>
+          </a>
+          <a href="article/career-skill-up-gaps/index.html" class="recent-card">
+            <img src="assets/img/article/career-skill-up-gaps.png" alt="スキマ時間のスキルアップ" class="recent-card-img" width="400" height="225" loading="lazy" />
+            <div class="recent-card-body">
+              <span class="recent-card-badge">Career</span>
+              <p class="recent-card-title">スキマ時間でスキルアップする、小さな習慣</p>
+            </div>
+          </a>
+        </div>
+        <div class="recent-more">
+          <a href="category/beauty/index.html">すべての記事を見る →</a>
         </div>
       </div>
     </section>
