@@ -35,9 +35,14 @@
 
       headerEl.innerHTML = `
         <header class="header-sub">
+          <nav class="header-sub-nav">
+            <div class="header-sub-nav-inner">
+              <a href="${backHref}" class="back-link">← ${backLabel}</a>
+              <a href="${ROOT}/index.html" class="header-sub-brand"><strong>jikan salon</strong></a>
+              <span class="header-sub-nav-spacer"></span>
+            </div>
+          </nav>
           <div class="container">
-            <a href="${backHref}" class="back-link">← ${backLabel}</a>
-            <a href="${ROOT}/index.html" class="header-sub-brand"><strong>jikan salon</strong></a>
             ${phase    ? `<p class="program-phase">${phase}</p>`     : ''}
             <h1 class="page-title">${title}</h1>
             ${subtitle ? `<p class="page-subtitle">${subtitle}</p>` : ''}
