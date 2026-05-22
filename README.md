@@ -50,7 +50,7 @@ jikan-salon/
     │   └── components.js   # ヘッダー・フッター共通コンポーネント
     └── img/
         ├── topics/         # カテゴリーサムネイル画像
-        └── article/        # 記事サムネイル画像（スラッグ名.png）
+        └── article/        # 記事サムネイル画像（スラッグ名.png / .webp）
 ```
 
 ---
@@ -60,7 +60,7 @@ jikan-salon/
 | 種別 | 命名ルール | 例 |
 |---|---|---|
 | 記事フォルダ | `{カテゴリー}-{内容}-{キーワード}` | `beauty-skincare-5min` |
-| 記事サムネイル | `{記事スラッグ}.png` | `beauty-skincare-5min.png` |
+| 記事サムネイル | `{記事スラッグ}.png` / `.webp` | `beauty-skincare-5min.png` |
 | カテゴリー画像 | `{カテゴリー名小文字}.png` | `beauty.png` |
 | CSSファイル | `{用途}.css` | `article.css` |
 
@@ -71,7 +71,7 @@ jikan-salon/
 新しい記事を追加する際は以下を確認してください：
 
 - [ ] `article/{スラッグ}/index.html` を作成
-- [ ] `assets/img/article/{スラッグ}.png` をアップロード
+- [ ] `assets/img/article/{スラッグ}.png` と `.webp` をアップロード
 - [ ] 記事HTML内のOGP画像パスを正しく設定
 - [ ] `sitemap.xml` に新URLを追記・`lastmod` を更新
 - [ ] カテゴリーページ（`category/{カテゴリー}/index.html`）に記事カードを追加
@@ -102,6 +102,9 @@ jikan-salon/
 
 | 日付 | 内容 |
 |---|---|
+| 2026-05-22 | README 今後の予定・更新履歴を現状に合わせて更新 |
+| 2026-05-19 | Google Search Console認証ファイル追加（`google772f766b9ffa7ca0.html`） |
+| 2026-05-19 | 記事サムネイル画像アップロード（PNG＋WebP、全カテゴリー2本ずつ計12本超） |
 | 2026-05-19 | 記事6本追加（Beauty/Health/Career/Interior/Lifestyle/Time） |
 | 2026-05-19 | プライバシーポリシー・運営者情報ページ追加 |
 | 2026-05-19 | assets/img/article/ フォルダ作成 |
@@ -111,8 +114,15 @@ jikan-salon/
 
 ## 🚀 今後の予定
 
+### ✅ 対応済み
+- [x] 各記事サムネイル画像のアップロード（PNG＋WebP 対応済み）
+- [x] Google Search Console 認証ファイル設置
+
+### 🔲 未対応
 - [ ] 独自ドメイン取得 → Google AdSense申請
-- [ ] 各記事サムネイル画像のアップロード・OGP差し替え
-- [ ] カテゴリーページへの記事カード追加
+  - AdSense申請の目安：各カテゴリー2〜3本以上（合計12〜18本程度）
+  - 独自ドメイン設定後は `sitemap.xml`・`robots.txt` のURL更新も必要
+- [ ] OGP画像パスの確認・差し替え（各記事のHTMLを個別確認）
+- [ ] カテゴリーページへの記事カード追加（6カテゴリー × 現行記事分）
 - [ ] sitemap.xml の定期更新
 - [ ] 記事の追加（各カテゴリー2本目以降）
